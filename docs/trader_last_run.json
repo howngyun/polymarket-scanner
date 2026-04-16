@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-04-16T12:26:18+00:00",
+  "mode": "PAPER",
+  "current_prices": {
+    "BTC": 74742.57,
+    "ETH": 2342.07,
+    "SOL": 85.38,
+    "XRP": 1.417
+  },
+  "signals_found": 0,
+  "trades_placed": 0,
+  "settled": 0,
+  "open_positions_count": 0,
+  "stats": {
+    "total_signals": 0,
+    "total_filled": 0,
+    "total_resolved": 0,
+    "total_pnl": 0.0,
+    "win_rate": 0.0,
+    "avg_edge_at_entry": 0.0,
+    "sharpe_estimate": null
+  }
+}

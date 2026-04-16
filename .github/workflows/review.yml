@@ -1,21 +1,25 @@
-name: Polymarket Scanner
+name: Claude Daily Review
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # 30분마다 (public 레포 = 무료 무제한)
-  workflow_dispatch:          # 수동 실행 버튼
+    - cron: "0 23 * * *"   # UTC 23:00 = KST 08:00 (매일 1회)
+  workflow_dispatch:
 
 permissions:
-  contents: write             # docs/ 커밋용
+  contents: write
 
 concurrency:
-  group: scan
+  group: review
   cancel-in-progress: false
 
 jobs:
-  scan:
+  review:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
     steps:
       - name: Checkout
@@ -30,20 +34,14 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Run scan
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python scanner/run_once.py
+      - name: Run Claude daily review
+        run: python monitor/claude_review.py
 
-      - name: Generate dashboard
-        run: python scanner/dashboard.py
-
-      - name: Commit & push docs
+      - name: Commit review
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main || true
           git add docs/
           git diff --cached --quiet && echo "변경 없음, 스킵" || \
-            (git commit -m "scan: $(date -u '+%Y-%m-%d %H:%M UTC')" && git push)
+            (git commit -m "review: $(date -u '+%Y-%m-%d')" && git push)

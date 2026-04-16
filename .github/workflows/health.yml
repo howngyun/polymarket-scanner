@@ -1,21 +1,24 @@
-name: Polymarket Scanner
+name: Health Check
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # 30분마다 (public 레포 = 무료 무제한)
-  workflow_dispatch:          # 수동 실행 버튼
+    - cron: "15 * * * *"   # 매 시간 15분에 실행 (다른 워크플로우와 겹치지 않게)
+  workflow_dispatch:
 
 permissions:
-  contents: write             # docs/ 커밋용
+  contents: write
 
 concurrency:
-  group: scan
+  group: health
   cancel-in-progress: false
 
 jobs:
-  scan:
+  health:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
     steps:
       - name: Checkout
@@ -30,20 +33,14 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Run scan
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python scanner/run_once.py
+      - name: Run health check
+        run: python monitor/health_check.py
 
-      - name: Generate dashboard
-        run: python scanner/dashboard.py
-
-      - name: Commit & push docs
+      - name: Commit results
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main || true
           git add docs/
           git diff --cached --quiet && echo "변경 없음, 스킵" || \
-            (git commit -m "scan: $(date -u '+%Y-%m-%d %H:%M UTC')" && git push)
+            (git commit -m "health: $(date -u '+%Y-%m-%d %H:%M UTC')" && git push)

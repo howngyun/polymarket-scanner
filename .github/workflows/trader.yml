@@ -1,0 +1,52 @@
+name: BTC Trader
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # 5분마다 (GitHub Actions 최소 주기)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trader
+  cancel-in-progress: false  # 실행 중단 시 데이터 손실 방지
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      LIVE_TRADING: ${{ secrets.LIVE_TRADING || '0' }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      POLYMARKET_API_KEY: ${{ secrets.POLYMARKET_API_KEY }}
+      POLYMARKET_API_SECRET: ${{ secrets.POLYMARKET_API_SECRET }}
+      WALLET_PRIVATE_KEY: ${{ secrets.WALLET_PRIVATE_KEY }}
+      STARTING_CAPITAL: ${{ secrets.STARTING_CAPITAL || '70' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run BTC trader
+        run: python trader/btc_trader.py
+
+      - name: Commit results
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git add docs/
+          git diff --cached --quiet && echo "변경 없음, 스킵" || \
+            (git commit -m "trader: $(date -u '+%Y-%m-%d %H:%M UTC')" && \
+             git push)
