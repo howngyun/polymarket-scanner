@@ -4,40 +4,87 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="refresh" content="300">
-<title>Polymarket Scanner</title>
+<title>Polymarket Bot</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, sans-serif; background: #0f1117; color: #e0e0e0; padding: 20px; }
+  body { font-family: -apple-system, sans-serif; background: #0f1117; color: #e0e0e0;
+         padding: 20px; max-width: 1400px; margin: 0 auto; }
   h1 { font-size: 1.4rem; margin-bottom: 4px; }
   .meta { color: #888; font-size: 0.85rem; margin-bottom: 24px; }
   .section { margin-bottom: 32px; }
-  h2 { font-size: 1rem; color: #aaa; border-bottom: 1px solid #2a2a2a; padding-bottom: 6px; margin-bottom: 12px; }
+  h2 { font-size: 1rem; color: #aaa; border-bottom: 1px solid #2a2a2a;
+        padding-bottom: 6px; margin-bottom: 12px; }
   table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
-  th { text-align: left; padding: 7px 10px; background: #1a1a2e; color: #aaa; font-weight: 500; }
+  th { text-align: left; padding: 7px 10px; background: #1a1a2e; color: #aaa;
+        font-weight: 500; }
   td { padding: 6px 10px; border-bottom: 1px solid #1e1e1e; }
   tr:hover td { background: #1a1a1a; }
   a { color: #7eb8f7; text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .badge { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 0.75rem; }
-  .stat { display: inline-block; margin-right: 20px; }
-  .stat-num { font-size: 1.5rem; font-weight: bold; color: #7eb8f7; }
+  .stat { display: inline-block; margin-right: 24px; margin-bottom: 10px;
+           min-width: 100px; }
+  .stat-num { font-size: 1.5rem; font-weight: bold; }
   .stat-lbl { font-size: 0.75rem; color: #888; }
-  .stats { margin-bottom: 24px; }
+  .stats { margin-bottom: 24px; padding: 16px; background: #1a1a2e; border-radius: 6px; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 3px;
+          font-size: 0.75rem; font-weight: bold; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
-<h1>Polymarket Scanner</h1>
-<div class="meta">마지막 스캔: 2026-04-16 11:37 UTC &nbsp;|&nbsp; 5분마다 자동 새로고침</div>
+<h1>Polymarket Trading Bot</h1>
+<div class="meta">
+  스캐너: 2026-04-16 11:37 UTC | 트레이더: 2026-04-16T12:29:59+00:00 |
+  헬스: <span style="color:#27ae60">ok</span>
+  | 5분마다 자동 새로고침
+</div>
 
-<div class="stats">
-  <div class="stat"><div class="stat-num">49,821</div><div class="stat-lbl">스캔한 마켓</div></div>
-  <div class="stat"><div class="stat-num">3</div><div class="stat-lbl">임박 기회</div></div>
-  <div class="stat"><div class="stat-num">30</div><div class="stat-lbl">가격 변동</div></div>
-  <div class="stat"><div class="stat-num">50</div><div class="stat-lbl">롱샷</div></div>
+
+
+<div class="section">
+  <h2>트레이더 상태
+    <span class="tag" style="background:#e67e22;color:#fff;margin-left:8px">PAPER</span>
+    <span class="tag" style="background:#888;color:#fff;margin-left:4px">Claude: —</span>
+  </h2>
+  <div class="stats">
+    <div class="stat"><div class="stat-num" style="color:#7eb8f7">$0.00</div><div class="stat-lbl">현재 자본</div></div>
+    <div class="stat"><div class="stat-num" style="color:#27ae60">$+0.00</div><div class="stat-lbl">누적 PnL</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">총 거래</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">정산됨</div></div>
+    <div class="stat"><div class="stat-num">0%</div><div class="stat-lbl">승률</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">오픈 포지션</div></div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="section">
+    <h2>오픈 포지션</h2>
+    <table>
+      <thead><tr><th>마켓</th><th>방향</th><th>진입가</th><th>베팅</th><th>엣지</th></tr></thead>
+      <tbody><tr><td colspan='5' style='text-align:center;color:#888'>오픈 포지션 없음</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>이상 감지 / 헬스 로그</h2>
+    <table>
+      <thead><tr><th>레벨</th><th>제목</th><th>상세</th></tr></thead>
+      <tbody><tr><td colspan='3' style='text-align:center;color:#27ae60'>정상</td></tr></tbody>
+    </table>
+  </div>
 </div>
 
 <div class="section">
-  <h2>임박 기회 (결제 6h 이내, 거의 확정인데 가격 차이 있음)</h2>
+  <h2>최근 거래 이력</h2>
+  <table>
+    <thead><tr><th>시간</th><th>마켓</th><th>방향</th><th>진입가</th><th>결과</th><th>PnL</th></tr></thead>
+    <tbody><tr><td colspan='6' style='text-align:center;color:#888'>거래 없음</td></tr></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>스캐너: 임박 기회 (결제 6h 이내)</h2>
   <table>
     <thead><tr><th>마켓</th><th>엣지</th><th>현재가</th><th>마감</th><th>유동성</th></tr></thead>
     <tbody><tr><td><a href='https://polymarket.com/event/will-the-price-of-bitcoin-be-between-76000-78000-on-april-16' target='_blank'>Will the price of Bitcoin be between $76,000 and $78,000 on April 16?</a></td><td style='color:#e67e22;font-weight:bold'>2.7%</td><td>0.973</td><td>4.4h</td><td>$18,901</td></tr>
@@ -47,34 +94,7 @@
 </div>
 
 <div class="section">
-  <h2>가격 변동 (전 스캔 대비 5% 이상 이동)</h2>
-  <table>
-    <thead><tr><th>마켓</th><th>변동</th><th>이전가</th><th>현재가</th><th>유동성</th></tr></thead>
-    <tbody><tr><td><a href='https://polymarket.com/event/atp-ellis-kukushk-2026-04-15' target='_blank'>Wuning 2: Blake Ellis vs Mikhail Kukushkin</a></td><td style='color:#27ae60;font-weight:bold'>+77.0%</td><td>0.230</td><td>1.000</td><td>$158,270</td></tr>
-<tr><td><a href='https://polymarket.com/event/wta-muchova-mertens-2026-04-16-first-set-total-8pt5' target='_blank'>Muchova vs. Mertens: Set 1 Games O/U 8.5</a></td><td style='color:#c0392b;font-weight:bold'>-71.0%</td><td>0.710</td><td>0.001</td><td>$14,272</td></tr>
-<tr><td><a href='https://polymarket.com/event/wta-salkova-maria-2026-04-16' target='_blank'>Open Capfinances Rouen Metropole: Dominika Salkova vs Tatjana Maria</a></td><td style='color:#c0392b;font-weight:bold'>-69.5%</td><td>0.695</td><td>0.001</td><td>$184,618</td></tr>
-<tr><td><a href='https://polymarket.com/event/cs2-yn-ff-2026-04-16-map-handicap-away-1pt5' target='_blank'>Map Handicap: YN (-1.5) vs Fire Flux Esports (+1.5)</a></td><td style='color:#c0392b;font-weight:bold'>-66.5%</td><td>0.665</td><td>0.001</td><td>$19,939</td></tr>
-<tr><td><a href='https://polymarket.com/event/wta-osuigwe-kraus-2026-04-15-first-set-winner-Osuigwe-vs-Kraus' target='_blank'>Set 1 Winner: Osuigwe vs Kraus</a></td><td style='color:#27ae60;font-weight:bold'>+64.5%</td><td>0.355</td><td>1.000</td><td>$15,393</td></tr>
-<tr><td><a href='https://polymarket.com/event/atp-smit-tu-2026-04-16-set-totals-2pt5' target='_blank'>Keegan Smith vs. Li Tu: Total Sets O/U 2.5</a></td><td style='color:#27ae60;font-weight:bold'>+63.0%</td><td>0.370</td><td>1.000</td><td>$51,045</td></tr>
-<tr><td><a href='https://polymarket.com/event/atp-ellis-kukushk-2026-04-15-first-set-total-10pt5' target='_blank'>Ellis vs. Kukushkin: Set 1 Games O/U 10.5</a></td><td style='color:#c0392b;font-weight:bold'>-62.0%</td><td>0.620</td><td>0.001</td><td>$235,846</td></tr>
-<tr><td><a href='https://polymarket.com/event/val-nova-wol-2026-04-16' target='_blank'>Valorant: Nova Esports vs Wolves Esports (BO3) - VCT China Group Omega</a></td><td style='color:#27ae60;font-weight:bold'>+61.5%</td><td>0.385</td><td>1.000</td><td>$138,473</td></tr>
-<tr><td><a href='https://polymarket.com/event/wta-osuigwe-kraus-2026-04-15-first-set-total-8pt5' target='_blank'>Osuigwe vs. Kraus: Set 1 Games O/U 8.5</a></td><td style='color:#c0392b;font-weight:bold'>-61.5%</td><td>0.615</td><td>0.001</td><td>$16,920</td></tr>
-<tr><td><a href='https://polymarket.com/event/wta-muchova-mertens-2026-04-16-first-set-winner-Muchova-vs-Mertens' target='_blank'>Set 1 Winner: Muchova vs Mertens</a></td><td style='color:#c0392b;font-weight:bold'>-60.0%</td><td>0.600</td><td>0.001</td><td>$18,016</td></tr>
-<tr><td><a href='https://polymarket.com/event/cs2-yn-ff-2026-04-16-game2' target='_blank'>Counter-Strike: Young Ninjas vs Fire Flux Esports - Map 2 Winner</a></td><td style='color:#c0392b;font-weight:bold'>-58.5%</td><td>0.585</td><td>0.001</td><td>$28,367</td></tr>
-<tr><td><a href='https://polymarket.com/event/wta-masarov-waltert-2026-04-16-first-set-total-9pt5' target='_blank'>Masarova vs. Waltert: Set 1 Games O/U 9.5</a></td><td style='color:#c0392b;font-weight:bold'>-57.0%</td><td>0.570</td><td>0.001</td><td>$17,823</td></tr>
-<tr><td><a href='https://polymarket.com/event/atp-smit-tu-2026-04-16-match-total-23pt5' target='_blank'>Smith vs. Tu: Match O/U 23.5</a></td><td style='color:#27ae60;font-weight:bold'>+57.0%</td><td>0.430</td><td>1.000</td><td>$18,733</td></tr>
-<tr><td><a href='https://polymarket.com/event/atp-zandsch-cerundo-2026-04-16-match-total-21pt5' target='_blank'>Zandschulp vs. Cerundolo: Match O/U 21.5</a></td><td style='color:#c0392b;font-weight:bold'>-56.5%</td><td>0.565</td><td>0.001</td><td>$24,149</td></tr>
-<tr><td><a href='https://polymarket.com/event/val-osg-gena-2026-04-16-map-handicap-away-1pt5' target='_blank'>Map Handicap: OSG (-1.5) vs Gen.G Global Academy (+1.5)</a></td><td style='color:#27ae60;font-weight:bold'>+56.0%</td><td>0.440</td><td>1.000</td><td>$23,008</td></tr>
-<tr><td><a href='https://polymarket.com/event/atp-ellis-kukushk-2026-04-15-first-set-total-8pt5' target='_blank'>Ellis vs. Kukushkin: Set 1 Games O/U 8.5</a></td><td style='color:#27ae60;font-weight:bold'>+56.0%</td><td>0.440</td><td>1.000</td><td>$240,086</td></tr>
-<tr><td><a href='https://polymarket.com/event/val-nova-wol-2026-04-16-game1' target='_blank'>Valorant: Nova Esports vs Wolves Esports - Map 1 Winner</a></td><td style='color:#27ae60;font-weight:bold'>+54.5%</td><td>0.455</td><td>1.000</td><td>$47,730</td></tr>
-<tr><td><a href='https://polymarket.com/event/val-nova-wol-2026-04-16-game2' target='_blank'>Valorant: Nova Esports vs Wolves Esports - Map 2 Winner</a></td><td style='color:#27ae60;font-weight:bold'>+54.5%</td><td>0.455</td><td>1.000</td><td>$38,480</td></tr>
-<tr><td><a href='https://polymarket.com/event/atp-altmaie-molcan-2026-04-15-first-set-winner-Altmaier-vs-Molcan' target='_blank'>Set 1 Winner: Altmaier vs Molcan</a></td><td style='color:#c0392b;font-weight:bold'>-54.0%</td><td>0.540</td><td>0.001</td><td>$19,832</td></tr>
-<tr><td><a href='https://polymarket.com/event/lol-bro2-gen-2026-04-16-game1-kill-over-25pt5' target='_blank'>Total Kills Over/Under 25.5 in Game 1?</a></td><td style='color:#c0392b;font-weight:bold'>-53.5%</td><td>0.535</td><td>0.001</td><td>$219,214</td></tr></tbody>
-  </table>
-</div>
-
-<div class="section">
-  <h2>롱샷 (1-8% 저확률 + 거래량 있음)</h2>
+  <h2>스캐너: 롱샷 (1-8%)</h2>
   <table>
     <thead><tr><th>마켓</th><th>롱샷가</th><th>마감</th><th>거래량</th></tr></thead>
     <tbody><tr><td><a href='https://polymarket.com/event/gta-vi-released-before-june-2026' target='_blank'>GTA VI released before June 2026?</a></td><td>0.016</td><td>1080.4h</td><td>$13,585,980</td></tr>
@@ -91,27 +111,13 @@
 <tr><td><a href='https://polymarket.com/event/will-the-boston-bruins-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Boston Bruins win the 2026 NHL Stanley Cup?</a></td><td>0.018</td><td>1788.4h</td><td>$1,129,100</td></tr>
 <tr><td><a href='https://polymarket.com/event/will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Buffalo Sabres win the 2026 NHL Stanley Cup?</a></td><td>0.052</td><td>1788.4h</td><td>$2,989,959</td></tr>
 <tr><td><a href='https://polymarket.com/event/will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?</a></td><td>0.028</td><td>1788.4h</td><td>$1,186,293</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-the-cleveland-cavaliers-win-the-2026-nba-finals' target='_blank'>Will the Cleveland Cavaliers win the 2026 NBA Finals?</a></td><td>0.042</td><td>1812.4h</td><td>$5,961,360</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-the-new-york-knicks-win-the-2026-nba-finals' target='_blank'>Will the New York Knicks win the 2026 NBA Finals?</a></td><td>0.035</td><td>1812.4h</td><td>$5,670,412</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-the-minnesota-timberwolves-win-the-2026-nba-finals' target='_blank'>Will the Minnesota Timberwolves win the 2026 NBA Finals?</a></td><td>0.015</td><td>1812.4h</td><td>$6,489,660</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-the-houston-rockets-win-the-2026-nba-finals' target='_blank'>Will the Houston Rockets win the 2026 NBA Finals?</a></td><td>0.019</td><td>1812.4h</td><td>$4,935,115</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-the-los-angeles-lakers-win-the-2026-nba-finals' target='_blank'>Will the Los Angeles Lakers win the 2026 NBA Finals?</a></td><td>0.013</td><td>1812.4h</td><td>$11,114,724</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-the-detroit-pistons-win-the-2026-nba-finals' target='_blank'>Will the Detroit Pistons win the 2026 NBA Finals?</a></td><td>0.057</td><td>1812.4h</td><td>$7,899,528</td></tr>
-<tr><td><a href='https://polymarket.com/event/megaeth-market-cap-fdv-6b-one-day-after-launch-365-559-334-815-776-488-224-766' target='_blank'>MegaETH market cap (FDV) >$6B one day after launch?</a></td><td>0.019</td><td>1788.4h</td><td>$2,417,259</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-germany-win-the-2026-fifa-world-cup-467' target='_blank'>Will Germany win the 2026 FIFA World Cup?</a></td><td>0.052</td><td>2268.4h</td><td>$10,820,675</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-portugal-win-the-2026-fifa-world-cup-912' target='_blank'>Will Portugal win the 2026 FIFA World Cup?</a></td><td>0.072</td><td>2268.4h</td><td>$12,868,842</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-netherlands-win-the-2026-fifa-world-cup-739' target='_blank'>Will Netherlands win the 2026 FIFA World Cup?</a></td><td>0.033</td><td>2268.4h</td><td>$13,707,654</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-usa-win-the-2026-fifa-world-cup-467' target='_blank'>Will USA win the 2026 FIFA World Cup?</a></td><td>0.013</td><td>2268.4h</td><td>$11,421,304</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-mexico-win-the-2026-fifa-world-cup-529' target='_blank'>Will Mexico win the 2026 FIFA World Cup?</a></td><td>0.011</td><td>2268.4h</td><td>$12,582,726</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-belgium-win-the-2026-fifa-world-cup-358' target='_blank'>Will Belgium win the 2026 FIFA World Cup?</a></td><td>0.018</td><td>2268.4h</td><td>$11,752,274</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-colombia-win-the-2026-fifa-world-cup-734' target='_blank'>Will Colombia win the 2026 FIFA World Cup?</a></td><td>0.017</td><td>2268.4h</td><td>$10,991,630</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-japan-win-the-2026-fifa-world-cup-112' target='_blank'>Will Japan win the 2026 FIFA World Cup?</a></td><td>0.018</td><td>2268.4h</td><td>$14,764,183</td></tr>
-<tr><td><a href='https://polymarket.com/event/will-norway-win-the-2026-fifa-world-cup-893' target='_blank'>Will Norway win the 2026 FIFA World Cup?</a></td><td>0.021</td><td>2268.4h</td><td>$12,006,368</td></tr></tbody>
+<tr><td><a href='https://polymarket.com/event/will-the-cleveland-cavaliers-win-the-2026-nba-finals' target='_blank'>Will the Cleveland Cavaliers win the 2026 NBA Finals?</a></td><td>0.042</td><td>1812.4h</td><td>$5,961,360</td></tr></tbody>
   </table>
 </div>
 
-<div class="meta" style="margin-top:40px">
-  자동매매 아님 — 감지 전용 도구. 실제 투자 전 충분히 검증할 것.
+<div class="meta" style="margin-top:40px;padding:12px;background:#1a1a1a;border-radius:4px">
+  <b>Claude 최신 리뷰:</b> —<br>
+  <span style="color:#888">자동매매 전에 PAPER 모드로 2주 검증. 스캔 49,821개 마켓.</span>
 </div>
 </body>
 </html>
