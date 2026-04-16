@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="300">
+<title>Polymarket Scanner</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, sans-serif; background: #0f1117; color: #e0e0e0; padding: 20px; }
+  h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  .meta { color: #888; font-size: 0.85rem; margin-bottom: 24px; }
+  .section { margin-bottom: 32px; }
+  h2 { font-size: 1rem; color: #aaa; border-bottom: 1px solid #2a2a2a; padding-bottom: 6px; margin-bottom: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  th { text-align: left; padding: 7px 10px; background: #1a1a2e; color: #aaa; font-weight: 500; }
+  td { padding: 6px 10px; border-bottom: 1px solid #1e1e1e; }
+  tr:hover td { background: #1a1a1a; }
+  a { color: #7eb8f7; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 0.75rem; }
+  .stat { display: inline-block; margin-right: 20px; }
+  .stat-num { font-size: 1.5rem; font-weight: bold; color: #7eb8f7; }
+  .stat-lbl { font-size: 0.75rem; color: #888; }
+  .stats { margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<h1>Polymarket Scanner</h1>
+<div class="meta">마지막 스캔: 2026-04-15 19:00 UTC &nbsp;|&nbsp; 5분마다 자동 새로고침</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">49,425</div><div class="stat-lbl">스캔한 마켓</div></div>
+  <div class="stat"><div class="stat-num">5</div><div class="stat-lbl">임박 기회</div></div>
+  <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">가격 변동</div></div>
+  <div class="stat"><div class="stat-num">50</div><div class="stat-lbl">롱샷</div></div>
+</div>
+
+<div class="section">
+  <h2>임박 기회 (결제 6h 이내, 거의 확정인데 가격 차이 있음)</h2>
+  <table>
+    <thead><tr><th>마켓</th><th>엣지</th><th>현재가</th><th>마감</th><th>유동성</th></tr></thead>
+    <tbody><tr><td><a href='https://polymarket.com/event/spy-up-or-down-on-april-15-2026' target='_blank'>SPY (SPY) Up or Down on April 15?</a></td><td style='color:#c0392b;font-weight:bold'>3.0%</td><td>0.970</td><td>1.0h</td><td>$6,969</td></tr>
+<tr><td><a href='https://polymarket.com/event/btc-updown-4h-1776268800' target='_blank'>Bitcoin Up or Down - April 15, 12:00PM-4:00PM ET</a></td><td style='color:#e67e22;font-weight:bold'>2.5%</td><td>0.975</td><td>1.0h</td><td>$6,175</td></tr>
+<tr><td><a href='https://polymarket.com/event/nvda-close-above-195-on-april-15-2026' target='_blank'>Will NVIDIA (NVDA) close above $195 on April 15?</a></td><td style='color:#e67e22;font-weight:bold'>2.05%</td><td>0.980</td><td>1.0h</td><td>$9,466</td></tr>
+<tr><td><a href='https://polymarket.com/event/qqq-up-or-down-on-april-15-2026' target='_blank'>QQQ (QQQ) Up or Down on April 15?</a></td><td style='color:#e67e22;font-weight:bold'>2.0%</td><td>0.980</td><td>1.0h</td><td>$7,213</td></tr>
+<tr><td><a href='https://polymarket.com/event/trump-announces-end-of-military-operations-against-iran-by-april-15th-962-364-677' target='_blank'>Trump announces end of military operations against Iran by April 15th?</a></td><td style='color:#27ae60;font-weight:bold'>1.6%</td><td>0.984</td><td>4.9h</td><td>$188,257</td></tr></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>가격 변동 (전 스캔 대비 5% 이상 이동)</h2>
+  <table>
+    <thead><tr><th>마켓</th><th>변동</th><th>이전가</th><th>현재가</th><th>유동성</th></tr></thead>
+    <tbody><tr><td colspan='5' style='text-align:center;color:#888'>없음</td></tr></tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>롱샷 (1-8% 저확률 + 거래량 있음)</h2>
+  <table>
+    <thead><tr><th>마켓</th><th>롱샷가</th><th>마감</th><th>거래량</th></tr></thead>
+    <tbody><tr><td><a href='https://polymarket.com/event/gta-vi-released-before-june-2026' target='_blank'>GTA VI released before June 2026?</a></td><td>0.016</td><td>1097.0h</td><td>$13,577,286</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Edmonton Oilers win the 2026 NHL Stanley Cup?</a></td><td>0.065</td><td>1805.0h</td><td>$494,358</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-dallas-stars-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Dallas Stars win the 2026 NHL Stanley Cup?</a></td><td>0.072</td><td>1805.0h</td><td>$1,157,532</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?</a></td><td>0.065</td><td>1805.0h</td><td>$1,463,554</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-los-angeles-kings-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Los Angeles Kings win the 2026 NHL Stanley Cup?</a></td><td>0.020</td><td>1805.0h</td><td>$6,734,262</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-ottawa-senators-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Ottawa Senators win the 2026 NHL Stanley Cup?</a></td><td>0.043</td><td>1805.0h</td><td>$1,065,648</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-minnesota-wild-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Minnesota Wild win the 2026 NHL Stanley Cup?</a></td><td>0.042</td><td>1805.0h</td><td>$8,640,763</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-utah-mammoth-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Utah Mammoth win the 2026 NHL Stanley Cup?</a></td><td>0.029</td><td>1805.0h</td><td>$938,863</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-philadelphia-flyers-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Philadelphia Flyers win the 2026 NHL Stanley Cup?</a></td><td>0.018</td><td>1805.0h</td><td>$1,078,236</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Anaheim Ducks win the 2026 NHL Stanley Cup?</a></td><td>0.018</td><td>1805.0h</td><td>$893,333</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Montreal Canadiens win the 2026 NHL Stanley Cup?</a></td><td>0.057</td><td>1805.0h</td><td>$1,323,090</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-boston-bruins-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Boston Bruins win the 2026 NHL Stanley Cup?</a></td><td>0.018</td><td>1805.0h</td><td>$1,123,852</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Buffalo Sabres win the 2026 NHL Stanley Cup?</a></td><td>0.053</td><td>1805.0h</td><td>$2,980,212</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup' target='_blank'>Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?</a></td><td>0.030</td><td>1805.0h</td><td>$1,174,896</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-cleveland-cavaliers-win-the-2026-nba-finals' target='_blank'>Will the Cleveland Cavaliers win the 2026 NBA Finals?</a></td><td>0.042</td><td>1829.0h</td><td>$5,755,478</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-new-york-knicks-win-the-2026-nba-finals' target='_blank'>Will the New York Knicks win the 2026 NBA Finals?</a></td><td>0.038</td><td>1829.0h</td><td>$5,477,316</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-minnesota-timberwolves-win-the-2026-nba-finals' target='_blank'>Will the Minnesota Timberwolves win the 2026 NBA Finals?</a></td><td>0.018</td><td>1829.0h</td><td>$6,299,459</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-houston-rockets-win-the-2026-nba-finals' target='_blank'>Will the Houston Rockets win the 2026 NBA Finals?</a></td><td>0.019</td><td>1829.0h</td><td>$4,782,460</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-los-angeles-lakers-win-the-2026-nba-finals' target='_blank'>Will the Los Angeles Lakers win the 2026 NBA Finals?</a></td><td>0.015</td><td>1829.0h</td><td>$10,800,285</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-the-detroit-pistons-win-the-2026-nba-finals' target='_blank'>Will the Detroit Pistons win the 2026 NBA Finals?</a></td><td>0.059</td><td>1829.0h</td><td>$7,460,224</td></tr>
+<tr><td><a href='https://polymarket.com/event/megaeth-market-cap-fdv-6b-one-day-after-launch-365-559-334-815-776-488-224-766' target='_blank'>MegaETH market cap (FDV) >$6B one day after launch?</a></td><td>0.023</td><td>1805.0h</td><td>$2,410,522</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-germany-win-the-2026-fifa-world-cup-467' target='_blank'>Will Germany win the 2026 FIFA World Cup?</a></td><td>0.052</td><td>2285.0h</td><td>$10,425,500</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-portugal-win-the-2026-fifa-world-cup-912' target='_blank'>Will Portugal win the 2026 FIFA World Cup?</a></td><td>0.076</td><td>2285.0h</td><td>$12,655,700</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-netherlands-win-the-2026-fifa-world-cup-739' target='_blank'>Will Netherlands win the 2026 FIFA World Cup?</a></td><td>0.033</td><td>2285.0h</td><td>$13,519,896</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-usa-win-the-2026-fifa-world-cup-467' target='_blank'>Will USA win the 2026 FIFA World Cup?</a></td><td>0.013</td><td>2285.0h</td><td>$10,965,785</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-mexico-win-the-2026-fifa-world-cup-529' target='_blank'>Will Mexico win the 2026 FIFA World Cup?</a></td><td>0.011</td><td>2285.0h</td><td>$12,469,459</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-belgium-win-the-2026-fifa-world-cup-358' target='_blank'>Will Belgium win the 2026 FIFA World Cup?</a></td><td>0.018</td><td>2285.0h</td><td>$11,532,747</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-colombia-win-the-2026-fifa-world-cup-734' target='_blank'>Will Colombia win the 2026 FIFA World Cup?</a></td><td>0.017</td><td>2285.0h</td><td>$10,797,539</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-japan-win-the-2026-fifa-world-cup-112' target='_blank'>Will Japan win the 2026 FIFA World Cup?</a></td><td>0.018</td><td>2285.0h</td><td>$14,459,331</td></tr>
+<tr><td><a href='https://polymarket.com/event/will-norway-win-the-2026-fifa-world-cup-893' target='_blank'>Will Norway win the 2026 FIFA World Cup?</a></td><td>0.021</td><td>2285.0h</td><td>$11,802,674</td></tr></tbody>
+  </table>
+</div>
+
+<div class="meta" style="margin-top:40px">
+  자동매매 아님 — 감지 전용 도구. 실제 투자 전 충분히 검증할 것.
+</div>
+</body>
+</html>

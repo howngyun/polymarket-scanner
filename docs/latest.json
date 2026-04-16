@@ -1,0 +1,509 @@
+{
+  "scanned_at": "2026-04-15 19:00 UTC",
+  "n_markets": 49425,
+  "bargains": [
+    {
+      "type": "near_resolution_bargain",
+      "question": "SPY (SPY) Up or Down on April 15?",
+      "slug": "spy-up-or-down-on-april-15-2026",
+      "top_price": 0.97,
+      "implied_edge": 3.0,
+      "hours_to_close": 1.0,
+      "liquidity": 6968.54774,
+      "volume": 17743.116605000003
+    },
+    {
+      "type": "near_resolution_bargain",
+      "question": "Bitcoin Up or Down - April 15, 12:00PM-4:00PM ET",
+      "slug": "btc-updown-4h-1776268800",
+      "top_price": 0.975,
+      "implied_edge": 2.5,
+      "hours_to_close": 1.0,
+      "liquidity": 6175.0551,
+      "volume": 29953.968680000005
+    },
+    {
+      "type": "near_resolution_bargain",
+      "question": "Will NVIDIA (NVDA) close above $195 on April 15?",
+      "slug": "nvda-close-above-195-on-april-15-2026",
+      "top_price": 0.9795,
+      "implied_edge": 2.05,
+      "hours_to_close": 1.0,
+      "liquidity": 9466.19187,
+      "volume": 18168.937594000006
+    },
+    {
+      "type": "near_resolution_bargain",
+      "question": "QQQ (QQQ) Up or Down on April 15?",
+      "slug": "qqq-up-or-down-on-april-15-2026",
+      "top_price": 0.98,
+      "implied_edge": 2.0,
+      "hours_to_close": 1.0,
+      "liquidity": 7213.22555,
+      "volume": 13921.603296000003
+    },
+    {
+      "type": "near_resolution_bargain",
+      "question": "Trump announces end of military operations against Iran by April 15th?",
+      "slug": "trump-announces-end-of-military-operations-against-iran-by-april-15th-962-364-677",
+      "top_price": 0.984,
+      "implied_edge": 1.6,
+      "hours_to_close": 4.9,
+      "liquidity": 188257.08991,
+      "volume": 9022430.859058958
+    }
+  ],
+  "movers": [],
+  "longshots": [
+    {
+      "type": "longshot",
+      "question": "GTA VI released before June 2026?",
+      "slug": "gta-vi-released-before-june-2026",
+      "longshot_price": 0.016,
+      "favorite_price": 0.984,
+      "hours_to_close": 1097.0,
+      "volume": 13577285.808913056
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.065,
+      "favorite_price": 0.935,
+      "hours_to_close": 1805.0,
+      "volume": 494357.70257100265
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-dallas-stars-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.072,
+      "favorite_price": 0.928,
+      "hours_to_close": 1805.0,
+      "volume": 1157532.0365579934
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.0645,
+      "favorite_price": 0.9355,
+      "hours_to_close": 1805.0,
+      "volume": 1463554.0780319967
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Los Angeles Kings win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-los-angeles-kings-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.02,
+      "favorite_price": 0.98,
+      "hours_to_close": 1805.0,
+      "volume": 6734262.249327922
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Ottawa Senators win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-ottawa-senators-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.043,
+      "favorite_price": 0.957,
+      "hours_to_close": 1805.0,
+      "volume": 1065648.1763599964
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.042,
+      "favorite_price": 0.958,
+      "hours_to_close": 1805.0,
+      "volume": 8640763.22208898
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Utah Mammoth win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-utah-mammoth-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.029,
+      "favorite_price": 0.971,
+      "hours_to_close": 1805.0,
+      "volume": 938862.5627069962
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Philadelphia Flyers win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-philadelphia-flyers-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.018,
+      "favorite_price": 0.982,
+      "hours_to_close": 1805.0,
+      "volume": 1078235.5919600022
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.0175,
+      "favorite_price": 0.9825,
+      "hours_to_close": 1805.0,
+      "volume": 893332.8361609987
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.057,
+      "favorite_price": 0.943,
+      "hours_to_close": 1805.0,
+      "volume": 1323090.3441089983
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Boston Bruins win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-boston-bruins-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.018,
+      "favorite_price": 0.982,
+      "hours_to_close": 1805.0,
+      "volume": 1123851.5275579996
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Buffalo Sabres win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.053,
+      "favorite_price": 0.947,
+      "hours_to_close": 1805.0,
+      "volume": 2980212.1091189943
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Pittsburgh Penguins win the 2026 NHL Stanley Cup?",
+      "slug": "will-the-pittsburgh-penguins-win-the-2026-nhl-stanley-cup",
+      "longshot_price": 0.03,
+      "favorite_price": 0.97,
+      "hours_to_close": 1805.0,
+      "volume": 1174896.4542029982
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
+      "slug": "will-the-cleveland-cavaliers-win-the-2026-nba-finals",
+      "longshot_price": 0.0415,
+      "favorite_price": 0.9585,
+      "hours_to_close": 1829.0,
+      "volume": 5755477.665589964
+    },
+    {
+      "type": "longshot",
+      "question": "Will the New York Knicks win the 2026 NBA Finals?",
+      "slug": "will-the-new-york-knicks-win-the-2026-nba-finals",
+      "longshot_price": 0.0385,
+      "favorite_price": 0.9615,
+      "hours_to_close": 1829.0,
+      "volume": 5477315.981135843
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
+      "slug": "will-the-minnesota-timberwolves-win-the-2026-nba-finals",
+      "longshot_price": 0.0175,
+      "favorite_price": 0.9825,
+      "hours_to_close": 1829.0,
+      "volume": 6299459.063851912
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Houston Rockets win the 2026 NBA Finals?",
+      "slug": "will-the-houston-rockets-win-the-2026-nba-finals",
+      "longshot_price": 0.0195,
+      "favorite_price": 0.9805,
+      "hours_to_close": 1829.0,
+      "volume": 4782460.3939869795
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
+      "slug": "will-the-los-angeles-lakers-win-the-2026-nba-finals",
+      "longshot_price": 0.015,
+      "favorite_price": 0.985,
+      "hours_to_close": 1829.0,
+      "volume": 10800285.09096608
+    },
+    {
+      "type": "longshot",
+      "question": "Will the Detroit Pistons win the 2026 NBA Finals?",
+      "slug": "will-the-detroit-pistons-win-the-2026-nba-finals",
+      "longshot_price": 0.0585,
+      "favorite_price": 0.9415,
+      "hours_to_close": 1829.0,
+      "volume": 7460223.917218961
+    },
+    {
+      "type": "longshot",
+      "question": "MegaETH market cap (FDV) >$6B one day after launch?",
+      "slug": "megaeth-market-cap-fdv-6b-one-day-after-launch-365-559-334-815-776-488-224-766",
+      "longshot_price": 0.023,
+      "favorite_price": 0.977,
+      "hours_to_close": 1805.0,
+      "volume": 2410521.9434800176
+    },
+    {
+      "type": "longshot",
+      "question": "Will Germany win the 2026 FIFA World Cup?",
+      "slug": "will-germany-win-the-2026-fifa-world-cup-467",
+      "longshot_price": 0.052,
+      "favorite_price": 0.948,
+      "hours_to_close": 2285.0,
+      "volume": 10425499.824966555
+    },
+    {
+      "type": "longshot",
+      "question": "Will Portugal win the 2026 FIFA World Cup?",
+      "slug": "will-portugal-win-the-2026-fifa-world-cup-912",
+      "longshot_price": 0.0765,
+      "favorite_price": 0.9235,
+      "hours_to_close": 2285.0,
+      "volume": 12655700.240531638
+    },
+    {
+      "type": "longshot",
+      "question": "Will Netherlands win the 2026 FIFA World Cup?",
+      "slug": "will-netherlands-win-the-2026-fifa-world-cup-739",
+      "longshot_price": 0.0325,
+      "favorite_price": 0.9675,
+      "hours_to_close": 2285.0,
+      "volume": 13519896.190682905
+    },
+    {
+      "type": "longshot",
+      "question": "Will USA win the 2026 FIFA World Cup?",
+      "slug": "will-usa-win-the-2026-fifa-world-cup-467",
+      "longshot_price": 0.0125,
+      "favorite_price": 0.9875,
+      "hours_to_close": 2285.0,
+      "volume": 10965785.128523871
+    },
+    {
+      "type": "longshot",
+      "question": "Will Mexico win the 2026 FIFA World Cup?",
+      "slug": "will-mexico-win-the-2026-fifa-world-cup-529",
+      "longshot_price": 0.0115,
+      "favorite_price": 0.9885,
+      "hours_to_close": 2285.0,
+      "volume": 12469459.364810225
+    },
+    {
+      "type": "longshot",
+      "question": "Will Belgium win the 2026 FIFA World Cup?",
+      "slug": "will-belgium-win-the-2026-fifa-world-cup-358",
+      "longshot_price": 0.0175,
+      "favorite_price": 0.9825,
+      "hours_to_close": 2285.0,
+      "volume": 11532747.175667206
+    },
+    {
+      "type": "longshot",
+      "question": "Will Colombia win the 2026 FIFA World Cup?",
+      "slug": "will-colombia-win-the-2026-fifa-world-cup-734",
+      "longshot_price": 0.0165,
+      "favorite_price": 0.9835,
+      "hours_to_close": 2285.0,
+      "volume": 10797539.072228825
+    },
+    {
+      "type": "longshot",
+      "question": "Will Japan win the 2026 FIFA World Cup?",
+      "slug": "will-japan-win-the-2026-fifa-world-cup-112",
+      "longshot_price": 0.0185,
+      "favorite_price": 0.9815,
+      "hours_to_close": 2285.0,
+      "volume": 14459330.679500002
+    },
+    {
+      "type": "longshot",
+      "question": "Will Norway win the 2026 FIFA World Cup?",
+      "slug": "will-norway-win-the-2026-fifa-world-cup-893",
+      "longshot_price": 0.0215,
+      "favorite_price": 0.9785,
+      "hours_to_close": 2285.0,
+      "volume": 11802673.670337182
+    },
+    {
+      "type": "longshot",
+      "question": "Will Morocco win the 2026 FIFA World Cup?",
+      "slug": "will-morocco-win-the-2026-fifa-world-cup-464",
+      "longshot_price": 0.0165,
+      "favorite_price": 0.9835,
+      "hours_to_close": 2285.0,
+      "volume": 13175410.38442813
+    },
+    {
+      "type": "longshot",
+      "question": "Xi Jinping out before 2027?",
+      "slug": "xi-jinping-out-before-2027",
+      "longshot_price": 0.07,
+      "favorite_price": 0.93,
+      "hours_to_close": 6221.0,
+      "volume": 8167802.128942689
+    },
+    {
+      "type": "longshot",
+      "question": "Will Pete Buttigieg win the 2028 Democratic presidential nomination?",
+      "slug": "will-pete-buttigieg-win-the-2028-democratic-presidential-nomination-687",
+      "longshot_price": 0.0395,
+      "favorite_price": 0.9605,
+      "hours_to_close": 22469.0,
+      "volume": 10102817.136380624
+    },
+    {
+      "type": "longshot",
+      "question": "Will Josh Shapiro win the 2028 Democratic presidential nomination?",
+      "slug": "will-josh-shapiro-win-the-2028-democratic-presidential-nomination-977",
+      "longshot_price": 0.0405,
+      "favorite_price": 0.9595,
+      "hours_to_close": 22469.0,
+      "volume": 7121550.356535314
+    },
+    {
+      "type": "longshot",
+      "question": "Will Wes Moore win the 2028 Democratic presidential nomination?",
+      "slug": "will-wes-moore-win-the-2028-democratic-presidential-nomination-714",
+      "longshot_price": 0.0125,
+      "favorite_price": 0.9875,
+      "hours_to_close": 22469.0,
+      "volume": 14401135.86245196
+    },
+    {
+      "type": "longshot",
+      "question": "Will Stephen A. Smith win the 2028 Democratic presidential nomination?",
+      "slug": "will-stephen-a-smith-win-the-2028-democratic-presidential-nomination-914",
+      "longshot_price": 0.0115,
+      "favorite_price": 0.9885,
+      "hours_to_close": 22469.0,
+      "volume": 18405243.809135463
+    },
+    {
+      "type": "longshot",
+      "question": "Will Kamala Harris win the 2028 Democratic presidential nomination?",
+      "slug": "will-kamala-harris-win-the-2028-democratic-presidential-nomination-641",
+      "longshot_price": 0.072,
+      "favorite_price": 0.928,
+      "hours_to_close": 22469.0,
+      "volume": 10128199.366807992
+    },
+    {
+      "type": "longshot",
+      "question": "Will Gretchen Whitmer win the 2028 Democratic presidential nomination?",
+      "slug": "will-gretchen-whitmer-win-the-2028-democratic-presidential-nomination-676",
+      "longshot_price": 0.013,
+      "favorite_price": 0.987,
+      "hours_to_close": 22469.0,
+      "volume": 8030209.92818303
+    },
+    {
+      "type": "longshot",
+      "question": "Will Andy Beshear win the 2028 Democratic presidential nomination?",
+      "slug": "will-andy-beshear-win-the-2028-democratic-presidential-nomination-832",
+      "longshot_price": 0.0275,
+      "favorite_price": 0.9725,
+      "hours_to_close": 22469.0,
+      "volume": 10891890.389678875
+    },
+    {
+      "type": "longshot",
+      "question": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
+      "slug": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
+      "longshot_price": 0.0585,
+      "favorite_price": 0.9415,
+      "hours_to_close": 22469.0,
+      "volume": 8154075.375698911
+    },
+    {
+      "type": "longshot",
+      "question": "Will Mark Cuban win the 2028 Democratic presidential nomination?",
+      "slug": "will-mark-cuban-win-the-2028-democratic-presidential-nomination-329",
+      "longshot_price": 0.0105,
+      "favorite_price": 0.9895,
+      "hours_to_close": 22469.0,
+      "volume": 18730650.62471658
+    },
+    {
+      "type": "longshot",
+      "question": "Will J.B. Pritzker win the 2028 Democratic presidential nomination?",
+      "slug": "will-jb-pritzker-win-the-2028-democratic-presidential-nomination-288",
+      "longshot_price": 0.0215,
+      "favorite_price": 0.9785,
+      "hours_to_close": 22469.0,
+      "volume": 13288409.020645974
+    },
+    {
+      "type": "longshot",
+      "question": "Will Cory Booker win the 2028 Democratic presidential nomination?",
+      "slug": "will-corey-booker-win-the-2028-democratic-presidential-nomination-125",
+      "longshot_price": 0.01,
+      "favorite_price": 0.99,
+      "hours_to_close": 22469.0,
+      "volume": 22307503.125501838
+    },
+    {
+      "type": "longshot",
+      "question": "Will Michelle Obama win the 2028 Democratic presidential nomination?",
+      "slug": "will-michelle-obama-win-the-2028-democratic-presidential-nomination-777",
+      "longshot_price": 0.011,
+      "favorite_price": 0.989,
+      "hours_to_close": 22469.0,
+      "volume": 22882836.76174916
+    },
+    {
+      "type": "longshot",
+      "question": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
+      "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
+      "longshot_price": 0.026,
+      "favorite_price": 0.974,
+      "hours_to_close": 22469.0,
+      "volume": 12790824.180265486
+    },
+    {
+      "type": "longshot",
+      "question": "Will Rahm Emanuel win the 2028 Democratic presidential nomination?",
+      "slug": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299",
+      "longshot_price": 0.0115,
+      "favorite_price": 0.9885,
+      "hours_to_close": 22469.0,
+      "volume": 12452844.968052015
+    },
+    {
+      "type": "longshot",
+      "question": "Will John Fetterman win the 2028 Democratic presidential nomination?",
+      "slug": "will-john-fetterman-win-the-2028-democratic-presidential-nomination-941",
+      "longshot_price": 0.01,
+      "favorite_price": 0.99,
+      "hours_to_close": 22469.0,
+      "volume": 17689212.68440934
+    },
+    {
+      "type": "longshot",
+      "question": "Will Jon Stewart win the 2028 Democratic presidential nomination?",
+      "slug": "will-jon-stewart-win-the-2028-democratic-presidential-nomination-518",
+      "longshot_price": 0.0225,
+      "favorite_price": 0.9775,
+      "hours_to_close": 22469.0,
+      "volume": 16935055.660165794
+    },
+    {
+      "type": "longshot",
+      "question": "Will Dwayne 'The Rock' Johnson win the 2028 Democratic presidential nomination?",
+      "slug": "will-dwayne-the-rock-johnson-win-the-2028-democratic-presidential-nomination",
+      "longshot_price": 0.0115,
+      "favorite_price": 0.9885,
+      "hours_to_close": 22469.0,
+      "volume": 10303906.966409009
+    },
+    {
+      "type": "longshot",
+      "question": "Will Ruben Gallego win the 2028 Democratic presidential nomination?",
+      "slug": "will-ruben-gallego-win-the-2028-democratic-presidential-nomination",
+      "longshot_price": 0.0105,
+      "favorite_price": 0.9895,
+      "hours_to_close": 22469.0,
+      "volume": 4414698.43797901
+    }
+  ]
+}

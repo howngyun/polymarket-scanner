@@ -1,0 +1,44 @@
+name: Polymarket Scanner
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # 30분마다 (public 레포 = 무료 무제한)
+  workflow_dispatch:          # 수동 실행 버튼
+
+permissions:
+  contents: write             # docs/ 커밋용
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Run scan
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scanner/run_once.py
+
+      - name: Generate dashboard
+        run: python scanner/dashboard.py
+
+      - name: Commit & push docs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --cached --quiet && echo "변경 없음, 스킵" || \
+            git commit -m "scan: $(date -u '+%Y-%m-%d %H:%M UTC')" && git push

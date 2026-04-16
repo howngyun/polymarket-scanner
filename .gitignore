@@ -1,0 +1,13 @@
+.env
+.env.local
+*.key
+*.pem
+secrets/
+data/raw/
+__pycache__/
+*.pyc
+.venv/
+venv/
+scanner/logs/
+*.log
+nohup.out
