@@ -1,6 +1,14 @@
 {
-  "checked_at": "2026-04-17T14:45:12+00:00",
-  "status": "ok",
+  "checked_at": "2026-04-17T18:08:06+00:00",
+  "status": "warn",
   "auto_fixes": [],
-  "anomalies": []
+  "anomalies": [
+    {
+      "rule": "check_trader_alive",
+      "severity": "warn",
+      "title": "\ud2b8\ub808\uc774\ub354 \uc9c0\uc5f0",
+      "detail": "\ub9c8\uc9c0\ub9c9 \uc2e4\ud589 32\ubd84 \uc804. cron \uc8fc\uae30 5\ubd84\uc778\ub370 \uc9c0\uc5f0\ub428.",
+      "timestamp": "2026-04-17T18:08:06.326867+00:00"
+    }
+  ]
 }
