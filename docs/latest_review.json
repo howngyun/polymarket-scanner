@@ -1,19 +1,11 @@
 {
-  "date": "2026-04-17",
+  "date": "2026-04-18",
   "review": {
-    "verdict": "watch",
-    "key_observations": [
-      "Zero trading activity in 24h period - no signals generated, no positions opened",
-      "Trader execution delayed 63 minutes vs 5-minute cron schedule - operational issue detected",
-      "Insufficient data for statistical analysis - no resolved trades to assess calibration"
-    ],
-    "calibration_check": "Cannot assess probability model calibration with zero resolved trades in sample period.",
-    "recommended_actions": [
-      "Investigate cron job failure causing 63-minute execution delay",
-      "Verify market data feeds are connected and returning live prices",
-      "Check if edge threshold parameters are too conservative (preventing signal generation)"
-    ],
-    "summary": "\u26a0\ufe0f Bot operational but dormant: zero trades in 24h due to execution delays (63min vs 5min schedule). Fix cron reliability before evaluating strategy performance."
+    "verdict": "unknown",
+    "summary": "Claude \ud638\ucd9c \uc2e4\ud328: 401 Client Error: Unauthorized for url: https://api.anthropic.com/v1/messages",
+    "key_observations": [],
+    "calibration_check": "",
+    "recommended_actions": []
   },
   "last_24h": {
     "trades_count": 0,
