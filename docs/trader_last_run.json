@@ -1,19 +1,29 @@
 {
-  "timestamp": "2026-04-18T12:01:06+00:00",
+  "timestamp": "2026-04-18T14:27:23+00:00",
   "mode": "PAPER",
-  "current_prices": {
-    "BTC": 76148.2,
-    "ETH": 2355.48,
-    "SOL": 86.65,
-    "XRP": 1.43324
-  },
-  "signals_found": 0,
-  "trades_placed": 0,
+  "starting_capital": 500.0,
+  "current_capital": 500.0,
   "settled": 0,
-  "open_positions_count": 0,
-  "stats": {
-    "total_signals": 0,
-    "total_filled": 0,
+  "strategies": [
+    {
+      "strategy": "high_prob_no",
+      "signals": 3,
+      "placed": 3,
+      "blocked": 0
+    },
+    {
+      "strategy": "cross_market_arb",
+      "signals": 0,
+      "placed": 0,
+      "blocked": 0
+    }
+  ],
+  "total_signals": 3,
+  "total_placed": 3,
+  "open_positions_count": 3,
+  "summary": {
+    "total_signals": 3,
+    "total_filled": 3,
     "total_resolved": 0,
     "total_pnl": 0.0,
     "win_rate": 0.0,
