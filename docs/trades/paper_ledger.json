@@ -58,5 +58,25 @@
     "resolved": false,
     "pnl": null,
     "strategy": "high_prob_no"
+  },
+  {
+    "status": "filled",
+    "timestamp": "2026-04-18T19:56:18.086150+00:00",
+    "mode": "paper",
+    "market_id": "991980",
+    "slug": "will-jeremiyah-love-be-the-third-pick-in-the-2026-nfl-draft",
+    "question": "Will Jeremiyah Love be the third pick in the 2026 NFL draft?",
+    "side": "no",
+    "entry_price": 0.969,
+    "shares": 21.92982456140351,
+    "bet_usd": 21.25,
+    "my_prob": 0.99,
+    "edge_pct_at_entry": 0.040000000000000036,
+    "end_date": "2026-04-23T00:00:00Z",
+    "current_btc": null,
+    "strike": null,
+    "resolved": false,
+    "pnl": null,
+    "strategy": "high_prob_no"
   }
 ]
