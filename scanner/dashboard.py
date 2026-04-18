@@ -48,6 +48,22 @@ def generate():
     win_rate = (wins / len(resolved) * 100) if resolved else 0
     last_trader_run = last_run.get("timestamp", "—")
 
+    # 전략별 PnL 집계
+    strategy_stats = {}
+    for t in ledger:
+        strat = t.get("strategy", "unknown")
+        s = strategy_stats.setdefault(strat, {
+            "signals": 0, "filled": 0, "resolved": 0, "wins": 0, "pnl": 0.0,
+        })
+        s["signals"] += 1
+        if t.get("status") == "filled":
+            s["filled"] += 1
+        if t.get("resolved"):
+            s["resolved"] += 1
+            if t.get("won"):
+                s["wins"] += 1
+            s["pnl"] += t.get("pnl", 0) or 0
+
     # === 헬스 ===
     health_status = health.get("status", "—")
     anomalies = health.get("anomalies", [])
@@ -132,6 +148,32 @@ def generate():
             )
         return "\n".join(out)
 
+    def _rows_strategy(stats):
+        if not stats:
+            return "<tr><td colspan='6' style='text-align:center;color:#888'>데이터 없음</td></tr>"
+        out = []
+        # 정렬: pnl 내림차순
+        items = sorted(stats.items(), key=lambda x: -x[1].get("pnl", 0))
+        for name, s in items:
+            pnl = s.get("pnl", 0)
+            color = "#27ae60" if pnl >= 0 else "#e74c3c"
+            wr = (s["wins"] / s["resolved"] * 100) if s["resolved"] else 0
+            display_name = {
+                "high_prob_no": "94-98c NO",
+                "cross_market_arb": "Cross-Market",
+                "legacy_btc": "BTC 2분 (폐기)",
+                "unknown": "미분류 (legacy)",
+            }.get(name, name)
+            out.append(
+                f"<tr><td><b>{display_name}</b></td>"
+                f"<td>{s['signals']}</td>"
+                f"<td>{s['filled']}</td>"
+                f"<td>{s['resolved']}</td>"
+                f"<td>{wr:.0f}%</td>"
+                f"<td style='color:{color};font-weight:bold'>${pnl:+.2f}</td></tr>"
+            )
+        return "\n".join(out)
+
     def _rows_anomalies(items):
         if not items:
             return "<tr><td colspan='3' style='text-align:center;color:#27ae60'>정상</td></tr>"
@@ -210,6 +252,14 @@ def generate():
     <div class="stat"><div class="stat-num">{win_rate:.0f}%</div><div class="stat-lbl">승률</div></div>
     <div class="stat"><div class="stat-num">{len(open_positions)}</div><div class="stat-lbl">오픈 포지션</div></div>
   </div>
+</div>
+
+<div class="section">
+  <h2>전략별 성과</h2>
+  <table>
+    <thead><tr><th>전략</th><th>시그널</th><th>체결</th><th>정산</th><th>승률</th><th>누적 PnL</th></tr></thead>
+    <tbody>{_rows_strategy(strategy_stats)}</tbody>
+  </table>
 </div>
 
 <div class="grid">

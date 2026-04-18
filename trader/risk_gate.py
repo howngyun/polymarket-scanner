@@ -108,6 +108,36 @@ def check(signal: dict, open_positions: list) -> tuple:
     return (True, "ok", bet_usd)
 
 
+def pre_trade_check_basic() -> bool:
+    """시그널 없이도 가능한 글로벌 리스크 체크.
+
+    멀티 전략에서 전략별 베팅 사이즈를 자체 계산할 때 사용.
+    Returns: True면 진입 가능, False면 차단.
+    """
+    state = load_state()
+    state = reset_daily_if_needed(state)
+
+    if state.get("kill_switch"):
+        return False
+
+    current = state.get("current_capital", config.STARTING_CAPITAL)
+    starting = state.get("starting_capital", config.STARTING_CAPITAL)
+    drawdown = (starting - current) / starting if starting > 0 else 0
+    if drawdown >= config.DRAWDOWN_LIMIT_PCT:
+        state["kill_switch"] = True
+        state["kill_reason"] = f"drawdown {drawdown*100:.1f}%"
+        save_state(state)
+        return False
+
+    if state.get("daily_pnl", 0.0) <= -config.DAILY_LOSS_LIMIT_USD:
+        return False
+
+    if count_recent_trades(state, hours=1) >= config.MAX_TRADES_PER_HOUR:
+        return False
+
+    return True
+
+
 def record_trade(trade: dict):
     """거래 발생 시 state 업데이트."""
     state = load_state()
