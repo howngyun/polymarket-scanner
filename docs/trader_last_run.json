@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-18T23:54:41+00:00",
+  "timestamp": "2026-04-19T06:19:07+00:00",
   "mode": "PAPER",
   "starting_capital": 500.0,
   "current_capital": 403.75,
@@ -7,9 +7,9 @@
   "strategies": [
     {
       "strategy": "high_prob_no",
-      "signals": 4,
-      "placed": 0,
-      "blocked": 4
+      "signals": 6,
+      "placed": 1,
+      "blocked": 0
     },
     {
       "strategy": "cross_market_arb",
@@ -18,12 +18,12 @@
       "blocked": 0
     }
   ],
-  "total_signals": 4,
-  "total_placed": 0,
-  "open_positions_count": 4,
+  "total_signals": 6,
+  "total_placed": 1,
+  "open_positions_count": 5,
   "summary": {
-    "total_signals": 4,
-    "total_filled": 4,
+    "total_signals": 5,
+    "total_filled": 5,
     "total_resolved": 0,
     "total_pnl": 0.0,
     "win_rate": 0.0,

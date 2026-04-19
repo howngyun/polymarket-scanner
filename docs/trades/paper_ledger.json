@@ -78,5 +78,25 @@
     "resolved": false,
     "pnl": null,
     "strategy": "high_prob_no"
+  },
+  {
+    "status": "filled",
+    "timestamp": "2026-04-19T06:19:08.255098+00:00",
+    "mode": "paper",
+    "market_id": "679692",
+    "slug": "will-mark-wheeler-be-the-democratic-nominee-for-senate-in-alabama",
+    "question": "Will Mark Wheeler be the Democratic nominee for Senate in Alabama?",
+    "side": "no",
+    "entry_price": 0.9741,
+    "shares": 20.72682476131814,
+    "bet_usd": 20.19,
+    "my_prob": 0.99,
+    "edge_pct_at_entry": 0.03500000000000003,
+    "end_date": "2026-05-19T00:00:00Z",
+    "current_btc": null,
+    "strike": null,
+    "resolved": false,
+    "pnl": null,
+    "strategy": "high_prob_no"
   }
 ]
