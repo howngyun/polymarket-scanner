@@ -1,22 +1,14 @@
 {
-  "date": "2026-04-19",
+  "date": "2026-04-20",
   "review": {
-    "verdict": "watch",
-    "key_observations": [
-      "Only 4 trades entered, 0 resolved - insufficient data for calibration assessment",
-      "All trades betting NO at my_prob=0.99 with entries 0.959-0.970, showing consistent high-confidence regime",
-      "Capital drawdown to 403.75 from 500 (19.25% down) with all positions still open - exposure concentrated"
-    ],
-    "calibration_check": "Cannot assess calibration with zero resolved trades; need to wait for settlements to validate 99% confidence claims.",
-    "recommended_actions": [
-      "Monitor resolution outcomes closely over next 48-72h to validate model confidence",
-      "Consider reducing position size from 25 to 15-20 until first 5+ trades resolve to limit unrealized drawdown",
-      "If any of these 99% confidence trades resolve as losses, immediately review probability model inputs"
-    ],
-    "summary": "Bot placed 4 high-confidence NO bets (99% model prob) but none resolved yet. 19% capital tied up in open positions. Need settlement data to assess if model is properly calibrated - watch closely for next 2-3 days."
+    "verdict": "unknown",
+    "summary": "Claude \ud638\ucd9c \uc2e4\ud328: 529 Server Error: <none> for url: https://api.anthropic.com/v1/messages",
+    "key_observations": [],
+    "calibration_check": "",
+    "recommended_actions": []
   },
   "last_24h": {
-    "trades_count": 4,
+    "trades_count": 0,
     "resolved_count": 0,
     "wins": 0,
     "losses": 0,
