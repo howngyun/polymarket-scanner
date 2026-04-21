@@ -46,6 +46,111 @@ def prob_above_strike(
     return norm_cdf(d)
 
 
+def prob_touch_above_before(
+    current_price: float,
+    strike: float,
+    seconds_to_expiry: float,
+    annual_volatility: float,
+) -> float:
+    """P(max_{0<=t<=T} S_t >= strike) — 배리어 터치 확률 (upper barrier).
+
+    Reflection principle (drift=0 근사):
+      P(max S >= K) = N(d1) + (S/K) * N(d2)  (K > S일 때)
+      d1 = (ln(S/K) + σ²t/2) / (σ√t)
+      d2 = (ln(S/K) - σ²t/2) / (σ√t)
+
+    Polymarket "Will X reach $K before April 20" 류 마켓에 사용.
+    만기 시점 above 확률보다 ~2배 높음 (꼬리 관찰).
+    """
+    if seconds_to_expiry <= 0:
+        return 1.0 if current_price >= strike else 0.0
+    if annual_volatility <= 0:
+        return 1.0 if current_price >= strike else 0.0
+    if strike <= 0 or current_price <= 0:
+        return 0.5
+
+    # 현재가가 이미 strike 이상 → 이미 터치
+    if current_price >= strike:
+        return 1.0
+
+    t_years = seconds_to_expiry / 31_536_000.0
+    sigma = annual_volatility
+    sqrt_t = math.sqrt(t_years)
+    sigma_sqrt_t = sigma * sqrt_t
+    if sigma_sqrt_t == 0:
+        return 0.0
+
+    log_ratio = math.log(current_price / strike)
+    d1 = (log_ratio + 0.5 * sigma**2 * t_years) / sigma_sqrt_t
+    d2 = (log_ratio - 0.5 * sigma**2 * t_years) / sigma_sqrt_t
+
+    # K > S 이므로 log_ratio < 0 → d1, d2 < 0
+    # P(max > K) = N(d1) + (S/K) * N(d2)  (단순화: μ=0)
+    p = norm_cdf(d1) + (current_price / strike) * norm_cdf(d2)
+    return min(max(p, 0.0), 1.0)
+
+
+def prob_touch_below_before(
+    current_price: float,
+    strike: float,
+    seconds_to_expiry: float,
+    annual_volatility: float,
+) -> float:
+    """P(min_{0<=t<=T} S_t <= strike) — lower barrier.
+
+    대칭성: reflection principle, K < S일 때.
+    """
+    if seconds_to_expiry <= 0:
+        return 1.0 if current_price <= strike else 0.0
+    if annual_volatility <= 0:
+        return 1.0 if current_price <= strike else 0.0
+    if strike <= 0 or current_price <= 0:
+        return 0.5
+
+    if current_price <= strike:
+        return 1.0
+
+    t_years = seconds_to_expiry / 31_536_000.0
+    sigma = annual_volatility
+    sqrt_t = math.sqrt(t_years)
+    sigma_sqrt_t = sigma * sqrt_t
+    if sigma_sqrt_t == 0:
+        return 0.0
+
+    # K < S → log(K/S) < 0
+    log_ratio = math.log(strike / current_price)
+    d1 = (log_ratio + 0.5 * sigma**2 * t_years) / sigma_sqrt_t
+    d2 = (log_ratio - 0.5 * sigma**2 * t_years) / sigma_sqrt_t
+
+    p = norm_cdf(d1) + (strike / current_price) * norm_cdf(d2)
+    return min(max(p, 0.0), 1.0)
+
+
+def detect_barrier_question(question: str) -> bool:
+    """질문이 배리어(touch) 타입인지 판정.
+
+    Vanilla: "Will BTC close above $80k on April 30?" (만기 시점)
+    Barrier: "Will BTC reach $80k before April 30?" (기간 중 한 번이라도)
+    """
+    q = question.lower()
+    barrier_kws = (
+        "reach", "hit", "touch", "before", "by april", "by may", "by june",
+        "by july", "by august", "by september", "by october", "by november",
+        "by december", "by january", "by february", "by march",
+        "at any point", "at any time", "ever", "between now",
+    )
+    vanilla_kws = (
+        "close above", "close below", "at close", "on april", "on may",
+        "on june", "on july", "end of day", "eod",
+    )
+    has_barrier = any(k in q for k in barrier_kws)
+    has_vanilla = any(k in q for k in vanilla_kws)
+    # 명확한 vanilla 표현 있으면 vanilla 우선
+    if has_vanilla and not has_barrier:
+        return False
+    return has_barrier
+
+
 def prob_between(
     current_price: float,
     strike_low: float,

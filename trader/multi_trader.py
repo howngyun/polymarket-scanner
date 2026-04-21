@@ -17,12 +17,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from trader import config, executor, ledger, risk_gate
-from strategies import high_prob_no, cross_market_arb
+from strategies import high_prob_no, cross_market_arb, crypto_price_target, esports_dota
 
 
 STRATEGIES = {
     "high_prob_no": (high_prob_no, config.STRATEGY_HIGH_PROB_NO),
     "cross_market_arb": (cross_market_arb, config.STRATEGY_CROSS_MARKET),
+    "crypto_price_target": (crypto_price_target, config.STRATEGY_CRYPTO_PRICE_TARGET),
+    "esports_dota": (esports_dota, config.STRATEGY_ESPORTS_DOTA),
 }
 
 

@@ -1,33 +1,37 @@
-"""전략 1: 크립토 far-OTM NO 그라인딩.
+"""전략 3: 크립토 가격타겟 (justdance 아키타입, 2026-04-21 추가).
+
+차이점 vs high_prob_no:
+  - high_prob_no: NO 측만, 94-98c 대역, negative-skew 방어 엄격
+  - crypto_price_target: 양방향 YES/NO, 0.05~0.95 대역 전체, Kelly fractional sizing
 
 로직:
-  - 크립토 마켓 (BTC/ETH/SOL/XRP) 중 NO 가격 0.94~0.98 범위 스캔
-  - Black-Scholes 로그정규 모델로 YES 확률 추정
-  - 시장 NO 가격이 모델보다 낮으면 (= 시장이 YES를 과대 평가) NO 매수
-  - 엣지 계산: my_prob_NO - market_NO_price, 슬리피지+수수료(4%) 초과 시만 진입
+  1. 크립토 마켓 (BTC/ETH/SOL/XRP) 중 만기 1h~30일 스캔
+  2. 같은 Black-Scholes 로그정규 모델 (probability.py 재사용)
+  3. |my_prob - market_price| > MIN_EDGE_PCT 면 엣지 큰 쪽 매수
+     - my_prob_yes > market_yes + edge → YES 매수
+     - my_prob_no  > market_no  + edge → NO 매수
+  4. Fractional Kelly (0.25 Kelly) 사이즈 — high_prob_no 보다 공격적이나 full Kelly는 금지
 
-근거:
-  Polymarket 리테일이 far-OTM YES를 복권처럼 과매수하는 구조적 편향.
-  예) BTC=$67k, 5h 남음, strike=$78k → BS P(YES)≈0.001, 시장 YES=0.017
-     → NO 매수 @0.983, 기대 수익 ~1.5%p (수수료 후 마이너스 → 스킵)
-     → strike=$90k 같은 극단 far-OTM은 엣지 4%+ 가능
+근거 (wallet_research):
+  justdance (0xcc500cbcc8) — 월 PnL $208K, 16,562 trades, biggest win $86K.
+  같은 BS 모델이지만 양방향 잡아먹는 구조로 추정.
+  high_prob_no가 놓치는 mid-range (40-80c) 엣지를 커버.
 
-주의 (Negative Skewness):
-  - 99번 작게 벌고 1번에 크게 잃는 구조
-  - 극단적 가격 이벤트, 오라클 분쟁 등 테일 리스크
-  - 건당 자본 5% 이하로 엄격 제한
+리스크:
+  - high_prob_no와 겹치는 시장은 high_prob_no 우선 (중복 진입 방지)
+  - Kelly fractional도 연속 3패 시 포지션 축소 필요 (거버넌스는 risk_gate에서)
+  - News blackout 윈도우는 공유
 """
 from typing import Iterator, Optional
 
 from trader import config, polymarket_client, price_feed, probability
 
 
-# 허용 심볼 — price_feed.SYMBOLS와 동기화
 CRYPTO_SYMBOLS = ("BTC", "ETH", "SOL", "XRP")
 
 
-def _iter_crypto_markets_closing_soon(min_sec: int, max_sec: int) -> Iterator[dict]:
-    """크립토 마켓 중 마감 임박분만."""
+def _iter_crypto_markets(min_sec: int, max_sec: int) -> Iterator[dict]:
+    """크립토 마켓 중 만기 윈도우 내 것."""
     from datetime import datetime, timezone
     import requests
 
@@ -35,7 +39,6 @@ def _iter_crypto_markets_closing_soon(min_sec: int, max_sec: int) -> Iterator[di
     offset = 0
     page_size = 500
     max_pages = 10
-
     crypto_kws = ("bitcoin", "btc", "ethereum", "eth", "solana", "sol", "xrp")
 
     for _ in range(max_pages):
@@ -53,7 +56,7 @@ def _iter_crypto_markets_closing_soon(min_sec: int, max_sec: int) -> Iterator[di
             r.raise_for_status()
             batch = r.json()
         except Exception as e:
-            print(f"[high_prob_no] 마켓 조회 실패: {e}")
+            print(f"[crypto_price_target] 마켓 조회 실패: {e}")
             return
 
         if not batch:
@@ -89,27 +92,21 @@ def _iter_crypto_markets_closing_soon(min_sec: int, max_sec: int) -> Iterator[di
         offset += page_size
 
 
-def _compute_my_prob_no(symbol: str, strike: float, direction: str,
+def _compute_my_prob_yes(symbol: str, strike: float, direction: str,
                          is_barrier: bool, seconds_left: float,
                          price_cache: dict, vol_cache: dict) -> Optional[float]:
-    """BS 모델로 NO 확률 계산.
-
-    price_cache / vol_cache는 스캔 단위로 공유 (Kraken 호출 최소화).
-    Vanilla (만기 시점): prob_above_strike / 1 - prob_above_strike
-    Barrier (기간 중 터치): prob_touch_above_before / prob_touch_below_before
-    P(YES)에 fat-tail floor 적용.
-    """
+    """BS 모델로 YES 확률 계산. (high_prob_no._compute_my_prob_no의 YES 버전)"""
     if symbol not in price_cache:
         try:
             price_cache[symbol] = price_feed.get_current_price(symbol)
         except Exception as e:
-            print(f"[high_prob_no] 가격 조회 실패 {symbol}: {e}")
+            print(f"[crypto_price_target] 가격 조회 실패 {symbol}: {e}")
             return None
     if symbol not in vol_cache:
         try:
             vol_cache[symbol] = price_feed.get_recent_volatility(symbol, minutes=60)
         except Exception as e:
-            print(f"[high_prob_no] 변동성 조회 실패 {symbol}: {e}")
+            print(f"[crypto_price_target] 변동성 조회 실패 {symbol}: {e}")
             return None
 
     current = price_cache[symbol]
@@ -131,13 +128,14 @@ def _compute_my_prob_no(symbol: str, strike: float, direction: str,
         else:
             return None
 
-    # fat-tail floor: BS 로그정규 꼬리 과소평가 보정
+    # fat-tail floor + ceiling (양방향 대칭 방어)
     p_yes = max(p_yes, config.P_YES_FLOOR)
-    return 1.0 - p_yes
+    p_yes = min(p_yes, 1.0 - config.P_YES_FLOOR)
+    return p_yes
 
 
 def _in_news_blackout(now_utc) -> bool:
-    """현재 시각이 뉴스 이벤트 블랙아웃 윈도우 안인가."""
+    """high_prob_no와 동일 로직 (공유)."""
     from datetime import datetime, timezone, timedelta
     if not config.NEWS_BLACKOUT_EVENTS:
         return False
@@ -153,23 +151,26 @@ def _in_news_blackout(now_utc) -> bool:
 
 
 def detect_signals() -> list:
-    """크립토 far-OTM NO 후보 시그널 리스트 반환."""
+    """크립토 가격타겟 양방향 엣지 시그널."""
     from datetime import datetime, timezone
 
-    # 뉴스 블랙아웃 체크 — 이벤트 전후 12시간은 전체 스킵
     if _in_news_blackout(datetime.now(timezone.utc)):
-        print("[high_prob_no] 뉴스 블랙아웃 윈도우 — 시그널 생성 스킵")
+        print("[crypto_price_target] 뉴스 블랙아웃 — 스킵")
         return []
 
     signals = []
     price_cache: dict = {}
     vol_cache: dict = {}
 
-    for market in _iter_crypto_markets_closing_soon(
-        min_sec=config.HP_NO_MIN_SECONDS_TO_CLOSE,
-        max_sec=config.HP_NO_MAX_SECONDS_TO_CLOSE,
-    ):
-        if market["liquidity"] < config.HP_NO_MIN_LIQUIDITY:
+    min_sec = getattr(config, "CPT_MIN_SECONDS_TO_CLOSE", 3600)
+    max_sec = getattr(config, "CPT_MAX_SECONDS_TO_CLOSE", 30 * 86400)
+    min_edge = getattr(config, "CPT_MIN_EDGE_PCT", 0.05)
+    min_liq = getattr(config, "CPT_MIN_LIQUIDITY", 5000)
+    skip_no_band_low = getattr(config, "HP_NO_MIN_PRICE", 0.94)
+    skip_no_band_high = getattr(config, "HP_NO_MAX_PRICE", 0.98)
+
+    for market in _iter_crypto_markets(min_sec=min_sec, max_sec=max_sec):
+        if market["liquidity"] < min_liq:
             continue
 
         outcomes = [o.lower() for o in market["outcomes"]]
@@ -179,10 +180,14 @@ def detect_signals() -> list:
         if "yes" not in outcomes or "no" not in outcomes:
             continue
 
+        yes_idx = outcomes.index("yes")
         no_idx = outcomes.index("no")
+        yes_price = prices[yes_idx]
         no_price = prices[no_idx]
 
-        if not (config.HP_NO_MIN_PRICE <= no_price <= config.HP_NO_MAX_PRICE):
+        # high_prob_no 영역과 완전 겹치는 경우 스킵 (중복 진입 방지)
+        # high_prob_no: NO 0.94~0.98. crypto_price_target은 그 외 영역만 먹음
+        if skip_no_band_low <= no_price <= skip_no_band_high:
             continue
 
         parsed = probability.parse_market_question(market["question"])
@@ -198,25 +203,38 @@ def detect_signals() -> list:
             continue
 
         is_barrier = probability.detect_barrier_question(market["question"])
-
-        my_prob_no = _compute_my_prob_no(
+        my_prob_yes = _compute_my_prob_yes(
             symbol, strike, direction, is_barrier,
             market["seconds_left"], price_cache, vol_cache,
         )
-        if my_prob_no is None:
+        if my_prob_yes is None:
             continue
+        my_prob_no = 1.0 - my_prob_yes
 
-        edge_pct = my_prob_no - no_price
-        if edge_pct < config.MIN_EDGE_PCT:
+        # 양방향 엣지 계산 → 큰 쪽 선택
+        edge_yes = my_prob_yes - yes_price
+        edge_no = my_prob_no - no_price
+
+        if edge_yes >= edge_no and edge_yes >= min_edge:
+            side = "yes"
+            entry_price = yes_price
+            my_prob_side = my_prob_yes
+            edge = edge_yes
+        elif edge_no > edge_yes and edge_no >= min_edge:
+            side = "no"
+            entry_price = no_price
+            my_prob_side = my_prob_no
+            edge = edge_no
+        else:
             continue
 
         token_ids = market["tokenIds"]
         if len(token_ids) != 2:
             continue
-        no_token_id = token_ids[no_idx]
+        side_token_id = token_ids[yes_idx] if side == "yes" else token_ids[no_idx]
 
-        signal = {
-            "strategy": "high_prob_no",
+        signals.append({
+            "strategy": "crypto_price_target",
             "market_id": market["id"],
             "slug": market["slug"],
             "question": market["question"],
@@ -224,28 +242,50 @@ def detect_signals() -> list:
             "strike": strike,
             "direction": direction,
             "is_barrier": is_barrier,
-            "side": "no",
-            "entry_price": no_price,
-            "my_prob_selected": my_prob_no,
-            "edge_pct": edge_pct,
+            "side": side,
+            "entry_price": entry_price,
+            "my_prob_selected": my_prob_side,
+            "edge_pct": edge,
             "current_price": price_cache.get(symbol),
             "annual_vol": vol_cache.get(symbol),
             "seconds_left": market["seconds_left"],
             "liquidity": market["liquidity"],
             "endDate": market["endDate"],
             "token_ids": token_ids,
-            "no_token_id": no_token_id,
-        }
+            "no_token_id": token_ids[no_idx],
+            "yes_token_id": token_ids[yes_idx],
+            "side_token_id": side_token_id,
+        })
 
-        signals.append(signal)
-
-    # 엣지 큰 순으로 정렬 → 포지션 상한 걸릴 때 좋은 것부터 진입
     signals.sort(key=lambda s: s["edge_pct"], reverse=True)
     return signals
 
 
 def size_bet(signal: dict, capital: float) -> float:
-    """건당 베팅 크기 — 엄격한 자본 5% (negative skew 방어)."""
-    max_by_pct = capital * config.HP_NO_MAX_POSITION_PCT
-    max_by_cap = config.MAX_BET_USD
-    return round(min(max_by_pct, max_by_cap), 2)
+    """Fractional Kelly sizing (0.25 Kelly).
+
+    Kelly 공식 (바이너리):
+      f* = (p * b - q) / b
+      p = my_prob, q = 1-p, b = (1 - price) / price  (payout 비율)
+
+    0.25 × f* 적용. HP_NO 대비 더 공격적이지만 full Kelly 방지.
+    자본 대비 건당 상한은 config.CPT_MAX_POSITION_PCT로 캡.
+    """
+    p = signal["my_prob_selected"]
+    price = signal["entry_price"]
+    if price <= 0 or price >= 1:
+        return 0.0
+    b = (1.0 - price) / price
+    q = 1.0 - p
+    f_full = (p * b - q) / b
+    if f_full <= 0:
+        return 0.0
+
+    fraction = getattr(config, "CPT_KELLY_FRACTION", 0.25)
+    max_pct = getattr(config, "CPT_MAX_POSITION_PCT", 0.08)
+
+    f_clamped = min(fraction * f_full, max_pct)
+    bet = capital * f_clamped
+    bet = min(bet, config.MAX_BET_USD)
+    bet = max(bet, 0.0)
+    return round(bet, 2)
