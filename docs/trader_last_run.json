@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-21T10:51:46+00:00",
+  "timestamp": "2026-04-21T13:40:45+00:00",
   "mode": "PAPER",
   "starting_capital": 500.0,
   "current_capital": 383.56,
@@ -7,7 +7,7 @@
   "strategies": [
     {
       "strategy": "high_prob_no",
-      "signals": 4,
+      "signals": 0,
       "placed": 0,
       "blocked": 0
     },
@@ -16,9 +16,21 @@
       "signals": 0,
       "placed": 0,
       "blocked": 0
+    },
+    {
+      "strategy": "crypto_price_target",
+      "signals": 0,
+      "placed": 0,
+      "blocked": 0
+    },
+    {
+      "strategy": "esports_dota",
+      "signals": 0,
+      "placed": 0,
+      "blocked": 0
     }
   ],
-  "total_signals": 4,
+  "total_signals": 0,
   "total_placed": 0,
   "open_positions_count": 5,
   "summary": {
