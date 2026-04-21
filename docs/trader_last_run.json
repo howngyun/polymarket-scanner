@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-21T06:13:53+00:00",
+  "timestamp": "2026-04-21T10:51:46+00:00",
   "mode": "PAPER",
   "starting_capital": 500.0,
   "current_capital": 383.56,
@@ -7,7 +7,7 @@
   "strategies": [
     {
       "strategy": "high_prob_no",
-      "signals": 3,
+      "signals": 4,
       "placed": 0,
       "blocked": 0
     },
@@ -18,7 +18,7 @@
       "blocked": 0
     }
   ],
-  "total_signals": 3,
+  "total_signals": 4,
   "total_placed": 0,
   "open_positions_count": 5,
   "summary": {
