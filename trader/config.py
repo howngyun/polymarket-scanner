@@ -76,6 +76,12 @@ CM_MIN_LIQUIDITY = 500
 CM_MAX_SECONDS_TO_CLOSE = 180 * 86400  # 180일 이내 (정적 차익은 수렴 기다림, 긴 마켓 OK)
 CM_MAX_POSITION_PCT = 0.10
 
+# --- Strategy 5: 5-min Crypto Binary HFT (Railway 상시 프로세스) ---
+BINARY_MIN_EDGE_PCT = 0.05
+BINARY_MIN_LIQUIDITY = 1000
+BINARY_MAX_POSITION_PCT = 0.05
+BINARY_SWEET_SPOT_SEC = (30, 240)
+
 # ============ 공통 엣지 기준 ============
 MIN_EDGE_PCT = 0.04          # 4%p 이상 엣지 (슬리피지 2% + 수수료 2% 커버)
 MIN_MARKET_LIQUIDITY = 500
