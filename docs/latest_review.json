@@ -1,19 +1,19 @@
 {
-  "date": "2026-04-21",
+  "date": "2026-04-22",
   "review": {
     "verdict": "watch",
     "key_observations": [
-      "No resolved trades in dataset - cannot assess calibration or edge quality",
-      "Capital drawdown from 500 to 383.56 (-23.3%) with 5 open positions, 0 settled",
-      "All 5 filled trades still unresolved - extended holding period or delayed settlement risk"
+      "Zero resolved trades in 24h - insufficient data for calibration assessment",
+      "Capital drawdown to 383.56 from 500 (23% down) with 5 open positions unresolved",
+      "No strategy signals generated in last run - market may be outside signal thresholds"
     ],
-    "calibration_check": "Insufficient data: 0 resolved trades means probability model cannot be validated against actual outcomes.",
+    "calibration_check": "Cannot assess probability calibration with 0 resolved trades; need minimum 5 outcomes to evaluate model performance.",
     "recommended_actions": [
-      "Monitor time-to-resolution for open positions - if >7 days, review market selection criteria",
-      "Consider reducing position sizing by 30% until first batch resolves and win rate emerges",
-      "Do not increase exposure until \u22655 trades resolve to establish baseline calibration"
+      "Monitor next 48h for position resolutions before any parameter changes",
+      "Review why strategies generated 0 signals - verify data feeds and threshold parameters",
+      "If drawdown exceeds 30% before resolutions, tighten position sizing to 50% of current"
     ],
-    "summary": "Watchlist status: 23% drawdown with zero resolved trades prevents calibration assessment. Recommend conservative sizing until settlement data available."
+    "summary": "Insufficient data - 0 resolved trades in 24h. Watching 23% drawdown with 5 open positions. Need resolution data before calibration review possible."
   },
   "last_24h": {
     "trades_count": 0,
