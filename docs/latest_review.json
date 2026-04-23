@@ -1,19 +1,19 @@
 {
-  "date": "2026-04-22",
+  "date": "2026-04-23",
   "review": {
     "verdict": "watch",
     "key_observations": [
-      "Zero resolved trades in 24h - insufficient data for calibration assessment",
-      "Capital drawdown to 383.56 from 500 (23% down) with 5 open positions unresolved",
-      "No strategy signals generated in last run - market may be outside signal thresholds"
+      "Zero resolved trades in 24h - insufficient data for calibration analysis",
+      "Capital drawdown: 500\u2192383.56 (-23.3%) with 5 open positions, no settlements yet",
+      "Trader execution delayed (34min vs 5min cron) - operational issue detected"
     ],
-    "calibration_check": "Cannot assess probability calibration with 0 resolved trades; need minimum 5 outcomes to evaluate model performance.",
+    "calibration_check": "Cannot assess probability model calibration with 0 resolved trades; need minimum 5 settlements to evaluate my_prob vs outcomes.",
     "recommended_actions": [
-      "Monitor next 48h for position resolutions before any parameter changes",
-      "Review why strategies generated 0 signals - verify data feeds and threshold parameters",
-      "If drawdown exceeds 30% before resolutions, tighten position sizing to 50% of current"
+      "Investigate and fix cron execution delay (currently 34min lag)",
+      "Monitor next 48h for position resolutions before parameter changes",
+      "If drawdown exceeds -30% before any settlements, review position sizing"
     ],
-    "summary": "Insufficient data - 0 resolved trades in 24h. Watching 23% drawdown with 5 open positions. Need resolution data before calibration review possible."
+    "summary": "Insufficient data (0/5 positions resolved). System shows 23% drawdown with execution delays. Watch mode until settlements provide calibration signal."
   },
   "last_24h": {
     "trades_count": 0,
