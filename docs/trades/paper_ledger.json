@@ -75,9 +75,12 @@
     "end_date": "2026-04-23T00:00:00Z",
     "current_btc": null,
     "strike": null,
-    "resolved": false,
-    "pnl": null,
-    "strategy": "high_prob_no"
+    "resolved": true,
+    "pnl": 0.0,
+    "strategy": "high_prob_no",
+    "won": null,
+    "settled_at": "2026-04-24T06:31:35.431189+00:00",
+    "settlement_note": "auto_fix: 24\uc2dc\uac04+ \ubbf8\uacb0\uc81c \u2192 \ubb34\uc2b9\ubd80 \uac15\uc81c \ucc98\ub9ac"
   },
   {
     "status": "filled",
