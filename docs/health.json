@@ -1,6 +1,14 @@
 {
-  "checked_at": "2026-04-27T00:08:23+00:00",
-  "status": "ok",
+  "checked_at": "2026-04-27T15:27:10+00:00",
+  "status": "critical",
   "auto_fixes": [],
-  "anomalies": []
+  "anomalies": [
+    {
+      "rule": "check_trader_alive",
+      "severity": "critical",
+      "title": "\ud2b8\ub808\uc774\ub354 \uc815\uc9c0",
+      "detail": "\ub9c8\uc9c0\ub9c9 \uc2e4\ud589 376\ubd84 \uc804. Actions \ud655\uc778 \ud544\uc694.",
+      "timestamp": "2026-04-27T15:27:10.878803+00:00"
+    }
+  ]
 }
