@@ -1,19 +1,19 @@
 {
-  "date": "2026-04-26",
+  "date": "2026-04-27",
   "review": {
     "verdict": "watch",
     "key_observations": [
-      "Only 1 resolved trade in history (loss), insufficient data for calibration assessment",
-      "Current capital down 19% (404.81 from 500), with 4 open positions unresolved",
-      "Zero activity in last 24h despite 4 open positions - monitoring only"
+      "Only 1 resolved trade (loss) - insufficient sample for calibration assessment",
+      "Capital drawdown from 500 to 404.81 (-19%) with 4 open positions carrying unrealized losses",
+      "No trading activity in last 24h despite 4 open positions and avg_edge_at_entry of 4.0%"
     ],
-    "calibration_check": "Cannot assess model calibration with only 1 resolved trade; need minimum 5-10 resolved outcomes to evaluate my_prob accuracy.",
+    "calibration_check": "Cannot assess model calibration with only 1 resolved trade; need minimum 5-10 resolutions to evaluate my_prob accuracy.",
     "recommended_actions": [
-      "Continue paper mode monitoring until 10+ trades resolve to gather calibration data",
-      "Review the 4 open positions for hold duration and potential edge decay",
-      "No parameter changes recommended until statistical significance achieved"
+      "Continue paper trading without parameter changes until 10+ trades resolve",
+      "Monitor open positions for resolution timing - verify they are approaching close dates",
+      "If drawdown exceeds -25%, reduce position sizing by 50% for new trades"
     ],
-    "summary": "Insufficient data (1 resolved trade) for calibration review. Paper mode down 19% with 4 open positions. Recommend continuing observation until 10+ resolutions before any action."
+    "summary": "Insufficient data (1 resolved trade) to assess strategy health. Current -19% drawdown manageable for early-stage paper trading. Recommend continuing observation until 10+ resolutions available."
   },
   "last_24h": {
     "trades_count": 0,
