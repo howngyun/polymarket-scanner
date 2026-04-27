@@ -1,338 +1,328 @@
 {
-  "scanned_at": "2026-04-27 00:01 UTC",
-  "n_markets": 45261,
+  "scanned_at": "2026-04-27 09:28 UTC",
+  "n_markets": 46344,
   "bargains": [
     {
       "type": "near_resolution_bargain",
-      "question": "Will Bitcoin reach $81,000 on April 26?",
-      "slug": "will-bitcoin-reach-81k-on-april-26",
-      "top_price": 0.974,
-      "implied_edge": 2.6,
-      "hours_to_close": 4.0,
-      "liquidity": 12749.20791,
-      "volume": 16160.091858000014
+      "question": "Bitcoin Up or Down - April 27, 5:15AM-5:30AM ET",
+      "slug": "btc-updown-15m-1777281300",
+      "top_price": 0.975,
+      "implied_edge": 2.5,
+      "hours_to_close": 0.0,
+      "liquidity": 17370.4594,
+      "volume": 21177.511858999987
     },
     {
       "type": "near_resolution_bargain",
-      "question": "Will Bitcoin dip to $76,000 on April 26?",
-      "slug": "will-bitcoin-dip-to-76k-on-april-26",
-      "top_price": 0.978,
-      "implied_edge": 2.2,
-      "hours_to_close": 4.0,
-      "liquidity": 17932.42441,
-      "volume": 38654.778147
-    },
-    {
-      "type": "near_resolution_bargain",
-      "question": "Will Bitcoin dip to $76,000 on April 26?",
-      "slug": "will-bitcoin-dip-to-76k-on-april-26",
-      "top_price": 0.978,
-      "implied_edge": 2.2,
-      "hours_to_close": 4.0,
-      "liquidity": 17938.30539,
-      "volume": 38654.778147
+      "question": "Will \"The Super Mario Galaxy Movie\" 4th Weekend Box Office be greater than 20.5m?",
+      "slug": "will-the-super-mario-galaxy-movie-4th-weekend-box-office-be-greater-than-20pt5m",
+      "top_price": 0.9785,
+      "implied_edge": 2.15,
+      "hours_to_close": 2.5,
+      "liquidity": 16689.91275,
+      "volume": 56005.121232999845
     }
   ],
   "movers": [
     {
       "type": "price_mover",
-      "question": "XRP Up or Down - April 26, 5PM ET",
-      "slug": "xrp-up-or-down-april-26-2026-5pm-et",
-      "prev_price": 0.02,
+      "question": "Pieri vs. Wei: Set 1 Games O/U 10.5",
+      "slug": "wta-pieri-wei-2026-04-27-first-set-total-10pt5",
+      "prev_price": 0.19,
       "current_price": 0.9995,
-      "move_pct": 97.95,
-      "liquidity": 488578.24212,
-      "volume": 7714.266860000005
+      "move_pct": 80.95,
+      "liquidity": 8358.74328,
+      "volume": 216.027
     },
     {
       "type": "price_mover",
-      "question": "Bitcoin Up or Down - April 26, 5PM ET",
-      "slug": "bitcoin-up-or-down-april-26-2026-5pm-et",
-      "prev_price": 0.025,
-      "current_price": 0.9995,
-      "move_pct": 97.45,
-      "liquidity": 603935.51083,
-      "volume": 85864.64526300001
-    },
-    {
-      "type": "price_mover",
-      "question": "Ethereum Up or Down - April 26, 5PM ET",
-      "slug": "ethereum-up-or-down-april-26-2026-5pm-et",
-      "prev_price": 0.035,
-      "current_price": 0.9995,
-      "move_pct": 96.45,
-      "liquidity": 553821.70498,
-      "volume": 30522.517399000008
-    },
-    {
-      "type": "price_mover",
-      "question": "Solana Up or Down - April 26, 5PM ET",
-      "slug": "solana-up-or-down-april-26-2026-5pm-et",
-      "prev_price": 0.04,
-      "current_price": 0.9995,
-      "move_pct": 95.95,
-      "liquidity": 655469.7513,
-      "volume": 11080.906212000004
-    },
-    {
-      "type": "price_mover",
-      "question": "San Diego Padres vs. Arizona Diamondbacks",
-      "slug": "mlb-sd-ari-2026-04-26",
-      "prev_price": 0.945,
-      "current_price": 0.0005,
-      "move_pct": -94.45,
-      "liquidity": 740739.79787,
-      "volume": 463577.9564170004
-    },
-    {
-      "type": "price_mover",
-      "question": "Dogecoin Up or Down - April 26, 5PM ET",
-      "slug": "dogecoin-up-or-down-april-26-2026-5pm-et",
-      "prev_price": 0.075,
-      "current_price": 0.9995,
-      "move_pct": 92.45,
-      "liquidity": 314152.9898,
-      "volume": 897.8375959999998
-    },
-    {
-      "type": "price_mover",
-      "question": "BNB Up or Down - April 26, 5PM ET",
-      "slug": "bnb-up-or-down-april-26-2026-5pm-et",
-      "prev_price": 0.08,
-      "current_price": 0.9995,
-      "move_pct": 91.95,
-      "liquidity": 314756.76915,
-      "volume": 1346.42141
-    },
-    {
-      "type": "price_mover",
-      "question": "Guadalupe FC vs. CS Cartaginés: O/U 4.5",
-      "slug": "fpd-gua-car-2026-04-26-total-4pt5",
-      "prev_price": 0.105,
-      "current_price": 0.9995,
-      "move_pct": 89.45,
-      "liquidity": 20985.20718,
-      "volume": 8.04
-    },
-    {
-      "type": "price_mover",
-      "question": "Will the highest temperature in San Francisco be between 60-61°F on April 26?",
-      "slug": "highest-temperature-in-san-francisco-on-april-26-2026-60-61f",
-      "prev_price": 0.895,
-      "current_price": 0.0005,
-      "move_pct": -89.45,
-      "liquidity": 97502.12151,
-      "volume": 13743.510413999993
-    },
-    {
-      "type": "price_mover",
-      "question": "Spread: San Diego Padres (-1.5)",
-      "slug": "mlb-sd-ari-2026-04-26-spread-away-1pt5",
-      "prev_price": 0.89,
-      "current_price": 0.0005,
-      "move_pct": -88.95,
-      "liquidity": 331831.62522,
-      "volume": 8173.945175
-    },
-    {
-      "type": "price_mover",
-      "question": "Spread: San Diego Padres (-2.5)",
-      "slug": "mlb-sd-ari-2026-04-26-spread-away-2pt5",
-      "prev_price": 0.865,
-      "current_price": 0.0005,
-      "move_pct": -86.45,
-      "liquidity": 298732.61004,
-      "volume": 331.1059
-    },
-    {
-      "type": "price_mover",
-      "question": "CA Paranaense vs. EC Vitória: O/U 3.5",
-      "slug": "bra-cap-vit-2026-04-26-total-3pt5",
-      "prev_price": 0.15,
-      "current_price": 0.9995,
-      "move_pct": 84.95,
-      "liquidity": 193681.78947,
-      "volume": 25846.396622
-    },
-    {
-      "type": "price_mover",
-      "question": "Águilas Doradas Rionegro vs. Once Caldas: O/U 3.5",
-      "slug": "col1-gdr-onc-2026-04-26-total-3pt5",
-      "prev_price": 0.165,
-      "current_price": 0.9995,
-      "move_pct": 83.45,
-      "liquidity": 59256.91191,
-      "volume": 2445.716437
-    },
-    {
-      "type": "price_mover",
-      "question": "Will Ceará SC win on 2026-04-26?",
-      "slug": "bra2-csc-vln-2026-04-26-csc",
-      "prev_price": 0.835,
-      "current_price": 0.0005,
-      "move_pct": -83.45,
-      "liquidity": 37246.93169,
-      "volume": 6408.3044690000015
-    },
-    {
-      "type": "price_mover",
-      "question": "CA Newell's Old Boys vs. Instituto AC Córdoba: Both Teams to Score",
-      "slug": "arg-new-iac-2026-04-26-btts",
-      "prev_price": 0.175,
-      "current_price": 0.9995,
-      "move_pct": 82.45,
-      "liquidity": 63798.354,
-      "volume": 21320.410196
-    },
-    {
-      "type": "price_mover",
-      "question": "Spread: Everton de Viña del Mar (-1.5)",
-      "slug": "chi1-edv-cdc-2026-04-26-spread-home-1pt5",
-      "prev_price": 0.175,
-      "current_price": 0.9995,
-      "move_pct": 82.45,
-      "liquidity": 22792.51857,
-      "volume": 3006.333129
-    },
-    {
-      "type": "price_mover",
-      "question": "Will CD Achuapa vs. Antigua GFC end in a draw?",
-      "slug": "gtm-cda-ant-2026-04-26-draw",
-      "prev_price": 0.18,
-      "current_price": 0.9995,
-      "move_pct": 81.95,
-      "liquidity": 15822.33334,
-      "volume": 124.912466
-    },
-    {
-      "type": "price_mover",
-      "question": "Bitcoin Up or Down - April 26, 4:00PM-8:00PM ET",
-      "slug": "btc-updown-4h-1777233600",
-      "prev_price": 0.205,
-      "current_price": 0.9985,
-      "move_pct": 79.35,
-      "liquidity": 8612.10717,
-      "volume": 45509.62770899994
-    },
-    {
-      "type": "price_mover",
-      "question": "CD Achuapa vs. Antigua GFC: O/U 3.5",
-      "slug": "gtm-cda-ant-2026-04-26-total-3pt5",
-      "prev_price": 0.215,
-      "current_price": 0.9995,
-      "move_pct": 78.45,
-      "liquidity": 48615.26371,
-      "volume": 10.989
-    },
-    {
-      "type": "price_mover",
-      "question": "CD Malacateco vs. Comunicaciones FC: O/U 1.5",
-      "slug": "gtm-adm-com-2026-04-26-total-1pt5",
-      "prev_price": 0.78,
-      "current_price": 0.0005,
-      "move_pct": -77.95,
-      "liquidity": 28028.36113,
-      "volume": 203.49072700000002
-    },
-    {
-      "type": "price_mover",
-      "question": "Will Antigua GFC win on 2026-04-26?",
-      "slug": "gtm-cda-ant-2026-04-26-ant",
-      "prev_price": 0.77,
-      "current_price": 0.0005,
-      "move_pct": -76.95,
-      "liquidity": 23577.51576,
-      "volume": 2455.3977459999996
-    },
-    {
-      "type": "price_mover",
-      "question": "Guadalupe FC vs. CS Cartaginés: O/U 3.5",
-      "slug": "fpd-gua-car-2026-04-26-total-3pt5",
-      "prev_price": 0.24,
-      "current_price": 0.9995,
-      "move_pct": 75.95,
-      "liquidity": 22040.7904,
-      "volume": 158.477619
-    },
-    {
-      "type": "price_mover",
-      "question": "CA Newell's Old Boys vs. Instituto AC Córdoba: O/U 1.5",
-      "slug": "arg-new-iac-2026-04-26-total-1pt5",
-      "prev_price": 0.25,
-      "current_price": 0.9995,
-      "move_pct": 74.95,
-      "liquidity": 53493.23847,
-      "volume": 4335.465747
-    },
-    {
-      "type": "price_mover",
-      "question": "Spread: San Diego Padres (-3.5)",
-      "slug": "mlb-sd-ari-2026-04-26-spread-away-3pt5",
-      "prev_price": 0.745,
-      "current_price": 0.0005,
-      "move_pct": -74.45,
-      "liquidity": 296730.67379,
-      "volume": 279.473722
-    },
-    {
-      "type": "price_mover",
-      "question": "Will Águilas Doradas Rionegro vs. Once Caldas end in a draw?",
-      "slug": "col1-gdr-onc-2026-04-26-draw",
-      "prev_price": 0.26,
-      "current_price": 0.9995,
-      "move_pct": 73.95,
-      "liquidity": 51432.97013,
-      "volume": 6413.243179
-    },
-    {
-      "type": "price_mover",
-      "question": "Spread: CA Paranaense (-1.5)",
-      "slug": "bra-cap-vit-2026-04-26-spread-home-1pt5",
-      "prev_price": 0.27,
-      "current_price": 0.9995,
-      "move_pct": 72.95,
-      "liquidity": 43414.26912,
-      "volume": 2526.4662079999994
-    },
-    {
-      "type": "price_mover",
-      "question": "Spread: San Francisco Giants (-1.5)",
-      "slug": "mlb-mia-sf-2026-04-26-spread-home-1pt5",
+      "question": "Will the highest temperature in Hong Kong be 27°C on April 27?",
+      "slug": "highest-temperature-in-hong-kong-on-april-27-2026-27c",
       "prev_price": 0.295,
-      "current_price": 0.9995,
-      "move_pct": 70.45,
-      "liquidity": 298945.25399,
-      "volume": 5053.3171550000025
+      "current_price": 0.9975,
+      "move_pct": 70.25,
+      "liquidity": 44429.54722,
+      "volume": 48708.984274
     },
     {
       "type": "price_mover",
-      "question": "San Diego Padres vs. Arizona Diamondbacks: O/U 15.5",
-      "slug": "mlb-sd-ari-2026-04-26-total-15pt5",
-      "prev_price": 0.305,
+      "question": "LoL: HANJIN BRION Challengers vs Hanwha Life Esports Challengers (BO3) - LCK Challengers League Rounds 1-2",
+      "slug": "lol-bro1-hle-2026-04-27",
+      "prev_price": 0.315,
       "current_price": 0.9995,
-      "move_pct": 69.45,
-      "liquidity": 550571.40298,
-      "volume": 373172.31855399976
+      "move_pct": 68.45,
+      "liquidity": 367815.07367,
+      "volume": 86713.63622200016
     },
     {
       "type": "price_mover",
-      "question": "CA Grau vs. Club Alianza Lima: O/U 1.5",
-      "slug": "per1-cag-cal-2026-04-26-total-1pt5",
-      "prev_price": 0.69,
+      "question": "Set 1 Winner: Prihodko vs Binda",
+      "slug": "atp-prihodk-binda-2026-04-27-first-set-winner-Prihodko-vs-Binda",
+      "prev_price": 0.675,
       "current_price": 0.0005,
-      "move_pct": -68.95,
-      "liquidity": 25616.49003,
-      "volume": 2776.5981220000003
+      "move_pct": -67.45,
+      "liquidity": 6173.00834,
+      "volume": 241.54784899999999
     },
     {
       "type": "price_mover",
-      "question": "Will Ceará SC vs. Vila Nova FC end in a draw?",
-      "slug": "bra2-csc-vln-2026-04-26-draw",
-      "prev_price": 0.31,
+      "question": "Ognjen Milic vs. Renta Tokuda: Total Sets O/U 2.5",
+      "slug": "atp-milic-tokuda-2026-04-26-set-totals-2pt5",
+      "prev_price": 0.365,
       "current_price": 0.9995,
-      "move_pct": 68.95,
-      "liquidity": 40780.71713,
-      "volume": 459.79609500000015
+      "move_pct": 63.45,
+      "liquidity": 20682.78288,
+      "volume": 23.363090999999997
+    },
+    {
+      "type": "price_mover",
+      "question": "Will the lowest temperature in London be 8°C on April 27?",
+      "slug": "lowest-temperature-in-london-on-april-27-2026-8c",
+      "prev_price": 0.36,
+      "current_price": 0.9915,
+      "move_pct": 63.15,
+      "liquidity": 5284.6816,
+      "volume": 2068.6301080000007
+    },
+    {
+      "type": "price_mover",
+      "question": "LoL: HANJIN BRION Challengers vs Hanwha Life Esports Challengers - Game 1 Winner",
+      "slug": "lol-bro1-hle-2026-04-27-game1",
+      "prev_price": 0.375,
+      "current_price": 0.9995,
+      "move_pct": 62.45,
+      "liquidity": 152752.22013,
+      "volume": 97409.90617500004
+    },
+    {
+      "type": "price_mover",
+      "question": "Shymkent 2: Oleg Prihodko vs Alexandr Binda",
+      "slug": "atp-prihodk-binda-2026-04-27",
+      "prev_price": 0.725,
+      "current_price": 0.11,
+      "move_pct": -61.5,
+      "liquidity": 22978.3982,
+      "volume": 20509.680623
+    },
+    {
+      "type": "price_mover",
+      "question": "LoL: HANJIN BRION Challengers vs Hanwha Life Esports Challengers - Game 2 Winner",
+      "slug": "lol-bro1-hle-2026-04-27-game2",
+      "prev_price": 0.395,
+      "current_price": 0.9995,
+      "move_pct": 60.45,
+      "liquidity": 147719.91453,
+      "volume": 106348.47659900002
+    },
+    {
+      "type": "price_mover",
+      "question": "Alexis Galarneau vs. Dane Sweeny: Total Sets O/U 2.5",
+      "slug": "atp-galarne-sweeny-2026-04-26-set-totals-2pt5",
+      "prev_price": 0.405,
+      "current_price": 0.9995,
+      "move_pct": 59.45,
+      "liquidity": 74385.47183,
+      "volume": 674.910137
+    },
+    {
+      "type": "price_mover",
+      "question": "Will the highest temperature in Hong Kong be 28°C on April 27?",
+      "slug": "highest-temperature-in-hong-kong-on-april-27-2026-28c",
+      "prev_price": 0.59,
+      "current_price": 0.003,
+      "move_pct": -58.7,
+      "liquidity": 34049.61331,
+      "volume": 38670.357214999945
+    },
+    {
+      "type": "price_mover",
+      "question": "LoL: Dplus KIA Challengers vs Nongshim Esports Academy (BO3) - LCK Challengers League Rounds 1-2",
+      "slug": "lol-dkc-nsea-2026-04-27",
+      "prev_price": 0.415,
+      "current_price": 0.9995,
+      "move_pct": 58.45,
+      "liquidity": 618320.56551,
+      "volume": 179143.36559499995
+    },
+    {
+      "type": "price_mover",
+      "question": "Huzhou: Jessica Pieri vs Sijia Wei",
+      "slug": "wta-pieri-wei-2026-04-27",
+      "prev_price": 0.585,
+      "current_price": 0.0005,
+      "move_pct": -58.45,
+      "liquidity": 414205.96021,
+      "volume": 82719.06645099996
+    },
+    {
+      "type": "price_mover",
+      "question": "Set 1 Winner: Pieri vs Wei",
+      "slug": "wta-pieri-wei-2026-04-27-first-set-winner-Pieri-vs-Wei",
+      "prev_price": 0.58,
+      "current_price": 0.0005,
+      "move_pct": -57.95,
+      "liquidity": 8214.53546,
+      "volume": 632.0981739999999
+    },
+    {
+      "type": "price_mover",
+      "question": "Zhao vs. Kawa: Set 1 Games O/U 8.5",
+      "slug": "wta-zhao-kawa-2026-04-27-first-set-total-8pt5",
+      "prev_price": 0.56,
+      "current_price": 0.0005,
+      "move_pct": -55.95,
+      "liquidity": 6299.30453,
+      "volume": 832.9695469999999
+    },
+    {
+      "type": "price_mover",
+      "question": "Hang Seng (HSI) Up or Down on April 27?",
+      "slug": "hsi-up-or-down-on-april-27-2026",
+      "prev_price": 0.555,
+      "current_price": 0.0005,
+      "move_pct": -55.45,
+      "liquidity": 10693.40917,
+      "volume": 6396.569706
+    },
+    {
+      "type": "price_mover",
+      "question": "LoL: Dplus KIA Challengers vs Nongshim Esports Academy - Game 2 Winner",
+      "slug": "lol-dkc-nsea-2026-04-27-game2",
+      "prev_price": 0.445,
+      "current_price": 0.9995,
+      "move_pct": 55.45,
+      "liquidity": 347536.35244,
+      "volume": 288908.20381400007
+    },
+    {
+      "type": "price_mover",
+      "question": "LoL: Dplus KIA Challengers vs Nongshim Esports Academy - Game 1 Winner",
+      "slug": "lol-dkc-nsea-2026-04-27-game1",
+      "prev_price": 0.455,
+      "current_price": 0.9995,
+      "move_pct": 54.45,
+      "liquidity": 141575.03004,
+      "volume": 187720.2248609997
+    },
+    {
+      "type": "price_mover",
+      "question": "Milic vs. Tokuda: Match O/U 22.5",
+      "slug": "atp-milic-tokuda-2026-04-26-match-total-22pt5",
+      "prev_price": 0.455,
+      "current_price": 0.9995,
+      "move_pct": 54.45,
+      "liquidity": 19675.84338,
+      "volume": 5.58
+    },
+    {
+      "type": "price_mover",
+      "question": "Pieri vs. Wei: Match O/U 21.5",
+      "slug": "wta-pieri-wei-2026-04-27-match-total-21pt5",
+      "prev_price": 0.455,
+      "current_price": 0.9995,
+      "move_pct": 54.45,
+      "liquidity": 21449.83143,
+      "volume": 342.05910299999994
+    },
+    {
+      "type": "price_mover",
+      "question": "Lajal vs. Santillan: Match O/U 21.5",
+      "slug": "atp-lajal-santill-2026-04-26-match-total-21pt5",
+      "prev_price": 0.53,
+      "current_price": 0.0005,
+      "move_pct": -52.95,
+      "liquidity": 24371.39609,
+      "volume": 79.25999999999999
+    },
+    {
+      "type": "price_mover",
+      "question": "Galarneau vs. Sweeny: Match O/U 22.5",
+      "slug": "atp-galarne-sweeny-2026-04-26-match-total-22pt5",
+      "prev_price": 0.47,
+      "current_price": 0.9995,
+      "move_pct": 52.95,
+      "liquidity": 66250.19062,
+      "volume": 605.5843
+    },
+    {
+      "type": "price_mover",
+      "question": "T20 BIFA Cup: Himalayan Xi vs Bodoland",
+      "slug": "crint-him-bod-2026-04-26",
+      "prev_price": 0.48,
+      "current_price": 0.9995,
+      "move_pct": 51.95,
+      "liquidity": 38941.54614,
+      "volume": 2626.788653
+    },
+    {
+      "type": "price_mover",
+      "question": "Counter-Strike: LPH Gaming vs Sangal ALTERS - Map 1 Winner",
+      "slug": "cs2-lph-sng-2026-04-27-game1",
+      "prev_price": 0.515,
+      "current_price": 0.0005,
+      "move_pct": -51.45,
+      "liquidity": 6310.6408,
+      "volume": 390.230937
+    },
+    {
+      "type": "price_mover",
+      "question": "Zhao vs. Kawa: Match O/U 23.5",
+      "slug": "wta-zhao-kawa-2026-04-27-match-total-23pt5",
+      "prev_price": 0.515,
+      "current_price": 0.0005,
+      "move_pct": -51.45,
+      "liquidity": 42966.66983,
+      "volume": 300.67
+    },
+    {
+      "type": "price_mover",
+      "question": "Lajal vs. Santillan: Match O/U 23.5",
+      "slug": "atp-lajal-santill-2026-04-26-match-total-23pt5",
+      "prev_price": 0.51,
+      "current_price": 0.0005,
+      "move_pct": -50.95,
+      "liquidity": 27423.41591,
+      "volume": 40.59
+    },
+    {
+      "type": "price_mover",
+      "question": "Counter-Strike: STATE vs Lilmix - Map 1 Winner",
+      "slug": "cs2-sta6-lilmix-2026-04-27-game1",
+      "prev_price": 0.51,
+      "current_price": 0.0005,
+      "move_pct": -50.95,
+      "liquidity": 12987.68101,
+      "volume": 15661.120951000003
+    },
+    {
+      "type": "price_mover",
+      "question": "Rainbow Six Siege: LFO No Name vs Help Us LFO (BO3) - Asia-Pacific League Kickoff: North Decider Brackets",
+      "slug": "r6siege-lfonon-helpus-2026-04-26",
+      "prev_price": 0.51,
+      "current_price": 0.0005,
+      "move_pct": -50.95,
+      "liquidity": 24370.8892,
+      "volume": 4552.072705
+    },
+    {
+      "type": "price_mover",
+      "question": "Zhao vs. Kawa: Match O/U 22.5",
+      "slug": "wta-zhao-kawa-2026-04-27-match-total-22pt5",
+      "prev_price": 0.51,
+      "current_price": 0.0005,
+      "move_pct": -50.95,
+      "liquidity": 61966.75948,
+      "volume": 289.53
+    },
+    {
+      "type": "price_mover",
+      "question": "Honor of Kings: LT Gaming vs Douyu Gaming - Game 2 Winner",
+      "slug": "hok-ltg-dyg-2026-04-27-game2",
+      "prev_price": 0.505,
+      "current_price": 0.0005,
+      "move_pct": -50.45,
+      "liquidity": 257707.61859,
+      "volume": 949.86555
     }
   ],
   "longshots": [
@@ -340,37 +330,37 @@
       "type": "longshot",
       "question": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
       "slug": "will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup",
-      "longshot_price": 0.055,
-      "favorite_price": 0.945,
-      "hours_to_close": 1536.0,
-      "volume": 730597.6184950043
+      "longshot_price": 0.0255,
+      "favorite_price": 0.9745,
+      "hours_to_close": 1526.5,
+      "volume": 765508.997075004
     },
     {
       "type": "longshot",
       "question": "Will the Dallas Stars win the 2026 NHL Stanley Cup?",
       "slug": "will-the-dallas-stars-win-the-2026-nhl-stanley-cup",
-      "longshot_price": 0.045,
-      "favorite_price": 0.955,
-      "hours_to_close": 1536.0,
-      "volume": 1436150.383255991
+      "longshot_price": 0.0515,
+      "favorite_price": 0.9485,
+      "hours_to_close": 1526.5,
+      "volume": 1442033.8643429913
     },
     {
       "type": "longshot",
       "question": "Will the Vegas Golden Knights win the 2026 NHL Stanley Cup?",
       "slug": "will-the-vegas-golden-knights-win-the-2026-nhl-stanley-cup",
-      "longshot_price": 0.0375,
-      "favorite_price": 0.9625,
-      "hours_to_close": 1536.0,
-      "volume": 1677012.650716992
+      "longshot_price": 0.0395,
+      "favorite_price": 0.9605,
+      "hours_to_close": 1526.5,
+      "volume": 1682566.021783992
     },
     {
       "type": "longshot",
       "question": "Will the Minnesota Wild win the 2026 NHL Stanley Cup?",
       "slug": "will-the-minnesota-wild-win-the-2026-nhl-stanley-cup",
-      "longshot_price": 0.0405,
-      "favorite_price": 0.9595,
-      "hours_to_close": 1536.0,
-      "volume": 8937349.433581935
+      "longshot_price": 0.0525,
+      "favorite_price": 0.9475,
+      "hours_to_close": 1526.5,
+      "volume": 8942952.067340925
     },
     {
       "type": "longshot",
@@ -378,35 +368,35 @@
       "slug": "will-the-utah-mammoth-win-the-2026-nhl-stanley-cup",
       "longshot_price": 0.0415,
       "favorite_price": 0.9585,
-      "hours_to_close": 1536.0,
-      "volume": 1241104.9999399954
+      "hours_to_close": 1526.5,
+      "volume": 1244167.384078995
     },
     {
       "type": "longshot",
       "question": "Will the Philadelphia Flyers win the 2026 NHL Stanley Cup?",
       "slug": "will-the-philadelphia-flyers-win-the-2026-nhl-stanley-cup",
-      "longshot_price": 0.0255,
-      "favorite_price": 0.9745,
-      "hours_to_close": 1536.0,
-      "volume": 1324744.0055110024
+      "longshot_price": 0.0345,
+      "favorite_price": 0.9655,
+      "hours_to_close": 1526.5,
+      "volume": 1330085.045544002
     },
     {
       "type": "longshot",
       "question": "Will the Anaheim Ducks win the 2026 NHL Stanley Cup?",
       "slug": "will-the-anaheim-ducks-win-the-2026-nhl-stanley-cup",
-      "longshot_price": 0.0245,
-      "favorite_price": 0.9755,
-      "hours_to_close": 1536.0,
-      "volume": 1141645.1620699994
+      "longshot_price": 0.0405,
+      "favorite_price": 0.9595,
+      "hours_to_close": 1526.5,
+      "volume": 1166396.1927079994
     },
     {
       "type": "longshot",
       "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
       "slug": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup",
-      "longshot_price": 0.07,
-      "favorite_price": 0.93,
-      "hours_to_close": 1536.0,
-      "volume": 1816272.5318109894
+      "longshot_price": 0.044,
+      "favorite_price": 0.956,
+      "hours_to_close": 1526.5,
+      "volume": 1835778.971211989
     },
     {
       "type": "longshot",
@@ -414,44 +404,44 @@
       "slug": "will-the-buffalo-sabres-win-the-2026-nhl-stanley-cup",
       "longshot_price": 0.077,
       "favorite_price": 0.923,
-      "hours_to_close": 1536.0,
-      "volume": 3225104.3715759837
+      "hours_to_close": 1526.5,
+      "volume": 3235527.723630985
     },
     {
       "type": "longshot",
       "question": "Will the Cleveland Cavaliers win the 2026 NBA Finals?",
       "slug": "will-the-cleveland-cavaliers-win-the-2026-nba-finals",
-      "longshot_price": 0.036,
-      "favorite_price": 0.964,
-      "hours_to_close": 1560.0,
-      "volume": 10347936.882684933
+      "longshot_price": 0.0375,
+      "favorite_price": 0.9625,
+      "hours_to_close": 1550.5,
+      "volume": 10459019.887421945
     },
     {
       "type": "longshot",
       "question": "Will the New York Knicks win the 2026 NBA Finals?",
       "slug": "will-the-new-york-knicks-win-the-2026-nba-finals",
-      "longshot_price": 0.031,
-      "favorite_price": 0.969,
-      "hours_to_close": 1560.0,
-      "volume": 9249276.419287736
+      "longshot_price": 0.0275,
+      "favorite_price": 0.9725,
+      "hours_to_close": 1550.5,
+      "volume": 9345110.344296731
     },
     {
       "type": "longshot",
       "question": "Will the Minnesota Timberwolves win the 2026 NBA Finals?",
       "slug": "will-the-minnesota-timberwolves-win-the-2026-nba-finals",
-      "longshot_price": 0.013,
-      "favorite_price": 0.987,
-      "hours_to_close": 1560.0,
-      "volume": 11895031.26566288
+      "longshot_price": 0.012,
+      "favorite_price": 0.988,
+      "hours_to_close": 1550.5,
+      "volume": 12019175.788213884
     },
     {
       "type": "longshot",
       "question": "Will the Los Angeles Lakers win the 2026 NBA Finals?",
       "slug": "will-the-los-angeles-lakers-win-the-2026-nba-finals",
-      "longshot_price": 0.043,
-      "favorite_price": 0.957,
-      "hours_to_close": 1560.0,
-      "volume": 16932173.15883404
+      "longshot_price": 0.0355,
+      "favorite_price": 0.9645,
+      "hours_to_close": 1550.5,
+      "volume": 17051249.05335701
     },
     {
       "type": "longshot",
@@ -459,26 +449,26 @@
       "slug": "will-the-denver-nuggets-win-the-2026-nba-finals",
       "longshot_price": 0.0325,
       "favorite_price": 0.9675,
-      "hours_to_close": 1560.0,
-      "volume": 6729603.057919995
+      "hours_to_close": 1550.5,
+      "volume": 6844232.342363996
     },
     {
       "type": "longshot",
       "question": "Will the Detroit Pistons win the 2026 NBA Finals?",
       "slug": "will-the-detroit-pistons-win-the-2026-nba-finals",
-      "longshot_price": 0.023,
-      "favorite_price": 0.977,
-      "hours_to_close": 1560.0,
-      "volume": 12164862.818113744
+      "longshot_price": 0.0215,
+      "favorite_price": 0.9785,
+      "hours_to_close": 1550.5,
+      "volume": 12288933.046120755
     },
     {
       "type": "longshot",
       "question": "MegaETH market cap (FDV) >$6B one day after launch?",
       "slug": "megaeth-market-cap-fdv-6b-one-day-after-launch-365-559-334-815-776-488-224-766",
-      "longshot_price": 0.0105,
-      "favorite_price": 0.9895,
-      "hours_to_close": 1536.0,
-      "volume": 2608193.87782302
+      "longshot_price": 0.012,
+      "favorite_price": 0.988,
+      "hours_to_close": 1526.5,
+      "volume": 2612517.89921002
     },
     {
       "type": "longshot",
@@ -486,17 +476,17 @@
       "slug": "will-germany-win-the-2026-fifa-world-cup-467",
       "longshot_price": 0.0525,
       "favorite_price": 0.9475,
-      "hours_to_close": 2016.0,
-      "volume": 13665790.624215739
+      "hours_to_close": 2006.5,
+      "volume": 13728321.44454774
     },
     {
       "type": "longshot",
       "question": "Will Portugal win the 2026 FIFA World Cup?",
       "slug": "will-portugal-win-the-2026-fifa-world-cup-912",
-      "longshot_price": 0.0765,
-      "favorite_price": 0.9235,
-      "hours_to_close": 2016.0,
-      "volume": 15959936.990123603
+      "longshot_price": 0.0775,
+      "favorite_price": 0.9225,
+      "hours_to_close": 2006.5,
+      "volume": 16026551.642109605
     },
     {
       "type": "longshot",
@@ -504,8 +494,8 @@
       "slug": "will-netherlands-win-the-2026-fifa-world-cup-739",
       "longshot_price": 0.0335,
       "favorite_price": 0.9665,
-      "hours_to_close": 2016.0,
-      "volume": 15290771.353711905
+      "hours_to_close": 2006.5,
+      "volume": 15317501.454463897
     },
     {
       "type": "longshot",
@@ -513,8 +503,8 @@
       "slug": "will-usa-win-the-2026-fifa-world-cup-467",
       "longshot_price": 0.0125,
       "favorite_price": 0.9875,
-      "hours_to_close": 2016.0,
-      "volume": 24585946.945293967
+      "hours_to_close": 2006.5,
+      "volume": 24616834.442593955
     },
     {
       "type": "longshot",
@@ -522,8 +512,8 @@
       "slug": "will-uruguay-win-the-2026-fifa-world-cup-932",
       "longshot_price": 0.0105,
       "favorite_price": 0.9895,
-      "hours_to_close": 2016.0,
-      "volume": 14245418.642280988
+      "hours_to_close": 2006.5,
+      "volume": 14268313.86988999
     },
     {
       "type": "longshot",
@@ -531,8 +521,8 @@
       "slug": "will-mexico-win-the-2026-fifa-world-cup-529",
       "longshot_price": 0.0105,
       "favorite_price": 0.9895,
-      "hours_to_close": 2016.0,
-      "volume": 15506110.175185313
+      "hours_to_close": 2006.5,
+      "volume": 15547556.94541332
     },
     {
       "type": "longshot",
@@ -540,8 +530,8 @@
       "slug": "will-belgium-win-the-2026-fifa-world-cup-358",
       "longshot_price": 0.0205,
       "favorite_price": 0.9795,
-      "hours_to_close": 2016.0,
-      "volume": 14275195.209087081
+      "hours_to_close": 2006.5,
+      "volume": 14295962.475737087
     },
     {
       "type": "longshot",
@@ -549,8 +539,8 @@
       "slug": "will-colombia-win-the-2026-fifa-world-cup-734",
       "longshot_price": 0.0165,
       "favorite_price": 0.9835,
-      "hours_to_close": 2016.0,
-      "volume": 13151291.206214776
+      "hours_to_close": 2006.5,
+      "volume": 13159128.454083782
     },
     {
       "type": "longshot",
@@ -558,8 +548,8 @@
       "slug": "will-japan-win-the-2026-fifa-world-cup-112",
       "longshot_price": 0.0215,
       "favorite_price": 0.9785,
-      "hours_to_close": 2016.0,
-      "volume": 17214389.326942027
+      "hours_to_close": 2006.5,
+      "volume": 17368966.503878042
     },
     {
       "type": "longshot",
@@ -567,8 +557,8 @@
       "slug": "will-norway-win-the-2026-fifa-world-cup-893",
       "longshot_price": 0.0225,
       "favorite_price": 0.9775,
-      "hours_to_close": 2016.0,
-      "volume": 13554145.28823631
+      "hours_to_close": 2006.5,
+      "volume": 13627750.51832431
     },
     {
       "type": "longshot",
@@ -576,26 +566,26 @@
       "slug": "will-morocco-win-the-2026-fifa-world-cup-464",
       "longshot_price": 0.0155,
       "favorite_price": 0.9845,
-      "hours_to_close": 2016.0,
-      "volume": 15574933.70866414
+      "hours_to_close": 2006.5,
+      "volume": 15699458.159319134
     },
     {
       "type": "longshot",
       "question": "Will Pete Buttigieg win the 2028 Democratic presidential nomination?",
       "slug": "will-pete-buttigieg-win-the-2028-democratic-presidential-nomination-687",
-      "longshot_price": 0.0425,
-      "favorite_price": 0.9575,
-      "hours_to_close": 22200.0,
-      "volume": 10303176.218861626
+      "longshot_price": 0.0435,
+      "favorite_price": 0.9565,
+      "hours_to_close": 22190.5,
+      "volume": 10307427.026431626
     },
     {
       "type": "longshot",
       "question": "Will Josh Shapiro win the 2028 Democratic presidential nomination?",
       "slug": "will-josh-shapiro-win-the-2028-democratic-presidential-nomination-977",
-      "longshot_price": 0.0375,
-      "favorite_price": 0.9625,
-      "hours_to_close": 22200.0,
-      "volume": 7366082.83233525
+      "longshot_price": 0.0385,
+      "favorite_price": 0.9615,
+      "hours_to_close": 22190.5,
+      "volume": 7383081.549868242
     },
     {
       "type": "longshot",
@@ -603,8 +593,8 @@
       "slug": "will-wes-moore-win-the-2028-democratic-presidential-nomination-714",
       "longshot_price": 0.0125,
       "favorite_price": 0.9875,
-      "hours_to_close": 22200.0,
-      "volume": 15345238.730698975
+      "hours_to_close": 22190.5,
+      "volume": 15362141.802135972
     },
     {
       "type": "longshot",
@@ -612,17 +602,26 @@
       "slug": "will-stephen-a-smith-win-the-2028-democratic-presidential-nomination-914",
       "longshot_price": 0.0105,
       "favorite_price": 0.9895,
-      "hours_to_close": 22200.0,
-      "volume": 19638666.93057032
+      "hours_to_close": 22190.5,
+      "volume": 19716590.66929634
+    },
+    {
+      "type": "longshot",
+      "question": "Will Kamala Harris win the 2028 Democratic presidential nomination?",
+      "slug": "will-kamala-harris-win-the-2028-democratic-presidential-nomination-641",
+      "longshot_price": 0.0765,
+      "favorite_price": 0.9235,
+      "hours_to_close": 22190.5,
+      "volume": 11254498.93394101
     },
     {
       "type": "longshot",
       "question": "Will Gretchen Whitmer win the 2028 Democratic presidential nomination?",
       "slug": "will-gretchen-whitmer-win-the-2028-democratic-presidential-nomination-676",
-      "longshot_price": 0.0135,
-      "favorite_price": 0.9865,
-      "hours_to_close": 22200.0,
-      "volume": 8503187.352245033
+      "longshot_price": 0.013,
+      "favorite_price": 0.987,
+      "hours_to_close": 22190.5,
+      "volume": 8511982.683046034
     },
     {
       "type": "longshot",
@@ -630,17 +629,17 @@
       "slug": "will-andy-beshear-win-the-2028-democratic-presidential-nomination-832",
       "longshot_price": 0.022,
       "favorite_price": 0.978,
-      "hours_to_close": 22200.0,
-      "volume": 11565212.48557387
+      "hours_to_close": 22190.5,
+      "volume": 11575186.945573868
     },
     {
       "type": "longshot",
       "question": "Will Jon Ossoff win the 2028 Democratic presidential nomination?",
       "slug": "will-jon-ossoff-win-the-2028-democratic-presidential-nomination-885",
-      "longshot_price": 0.0535,
-      "favorite_price": 0.9465,
-      "hours_to_close": 22200.0,
-      "volume": 10461640.038938934
+      "longshot_price": 0.0545,
+      "favorite_price": 0.9455,
+      "hours_to_close": 22190.5,
+      "volume": 10463976.505105933
     },
     {
       "type": "longshot",
@@ -648,26 +647,26 @@
       "slug": "will-jb-pritzker-win-the-2028-democratic-presidential-nomination-288",
       "longshot_price": 0.0195,
       "favorite_price": 0.9805,
-      "hours_to_close": 22200.0,
-      "volume": 13666598.619775048
+      "hours_to_close": 22190.5,
+      "volume": 13710124.461841049
     },
     {
       "type": "longshot",
       "question": "Will Mark Kelly win the 2028 Democratic presidential nomination?",
       "slug": "will-mark-kelly-win-the-2028-democratic-presidential-nomination-479",
-      "longshot_price": 0.026,
-      "favorite_price": 0.974,
-      "hours_to_close": 22200.0,
-      "volume": 14845358.557933556
+      "longshot_price": 0.0245,
+      "favorite_price": 0.9755,
+      "hours_to_close": 22190.5,
+      "volume": 14879268.250493545
     },
     {
       "type": "longshot",
       "question": "Will Rahm Emanuel win the 2028 Democratic presidential nomination?",
       "slug": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299",
-      "longshot_price": 0.0245,
-      "favorite_price": 0.9755,
-      "hours_to_close": 22200.0,
-      "volume": 13110427.071217999
+      "longshot_price": 0.023,
+      "favorite_price": 0.977,
+      "hours_to_close": 22190.5,
+      "volume": 13112382.340127
     },
     {
       "type": "longshot",
@@ -675,8 +674,8 @@
       "slug": "will-roy-cooper-win-the-2028-democratic-presidential-nomination-286",
       "longshot_price": 0.0115,
       "favorite_price": 0.9885,
-      "hours_to_close": 22200.0,
-      "volume": 28404069.018923115
+      "hours_to_close": 22190.5,
+      "volume": 28446964.95164012
     },
     {
       "type": "longshot",
@@ -684,17 +683,17 @@
       "slug": "will-john-fetterman-win-the-2028-democratic-presidential-nomination-941",
       "longshot_price": 0.0105,
       "favorite_price": 0.9895,
-      "hours_to_close": 22200.0,
-      "volume": 18525391.484311245
+      "hours_to_close": 22190.5,
+      "volume": 18586519.898789253
     },
     {
       "type": "longshot",
       "question": "Will Jon Stewart win the 2028 Democratic presidential nomination?",
       "slug": "will-jon-stewart-win-the-2028-democratic-presidential-nomination-518",
-      "longshot_price": 0.0215,
-      "favorite_price": 0.9785,
-      "hours_to_close": 22200.0,
-      "volume": 22436658.64149007
+      "longshot_price": 0.022,
+      "favorite_price": 0.978,
+      "hours_to_close": 22190.5,
+      "volume": 22457952.590986073
     },
     {
       "type": "longshot",
@@ -702,17 +701,17 @@
       "slug": "will-dwayne-the-rock-johnson-win-the-2028-democratic-presidential-nomination",
       "longshot_price": 0.0115,
       "favorite_price": 0.9885,
-      "hours_to_close": 22200.0,
-      "volume": 11127625.524809042
+      "hours_to_close": 22190.5,
+      "volume": 11134243.251453042
     },
     {
       "type": "longshot",
       "question": "Will Ro Khanna win the 2028 Democratic presidential nomination?",
       "slug": "will-ro-khanna-win-the-2028-democratic-presidential-nomination",
-      "longshot_price": 0.0205,
-      "favorite_price": 0.9795,
-      "hours_to_close": 22200.0,
-      "volume": 9807869.348268326
+      "longshot_price": 0.02,
+      "favorite_price": 0.98,
+      "hours_to_close": 22190.5,
+      "volume": 9854294.005506327
     },
     {
       "type": "longshot",
@@ -720,26 +719,26 @@
       "slug": "will-james-talarico-win-the-2028-democratic-presidential-nomination",
       "longshot_price": 0.0205,
       "favorite_price": 0.9795,
-      "hours_to_close": 22200.0,
-      "volume": 8853745.91612308
+      "hours_to_close": 22190.5,
+      "volume": 8857213.65505908
     },
     {
       "type": "longshot",
       "question": "Will Alexandria Ocasio-Cortez win the 2028 US Presidential Election?",
       "slug": "will-alexandria-ocasio-cortez-win-the-2028-us-presidential-election",
-      "longshot_price": 0.063,
-      "favorite_price": 0.937,
-      "hours_to_close": 22200.0,
-      "volume": 11200577.06464281
+      "longshot_price": 0.058,
+      "favorite_price": 0.942,
+      "hours_to_close": 22190.5,
+      "volume": 11259332.337732814
     },
     {
       "type": "longshot",
       "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
       "slug": "will-pete-buttigieg-win-the-2028-us-presidential-election",
-      "longshot_price": 0.0215,
-      "favorite_price": 0.9785,
-      "hours_to_close": 22200.0,
-      "volume": 4155809.2642239667
+      "longshot_price": 0.0205,
+      "favorite_price": 0.9795,
+      "hours_to_close": 22190.5,
+      "volume": 4156329.954223967
     },
     {
       "type": "longshot",
@@ -747,8 +746,8 @@
       "slug": "will-josh-shapiro-win-the-2028-us-presidential-election",
       "longshot_price": 0.021,
       "favorite_price": 0.979,
-      "hours_to_close": 22200.0,
-      "volume": 6062463.86318991
+      "hours_to_close": 22190.5,
+      "volume": 6106062.500439902
     },
     {
       "type": "longshot",
@@ -756,17 +755,17 @@
       "slug": "will-andy-beshear-win-the-2028-us-presidential-election",
       "longshot_price": 0.0135,
       "favorite_price": 0.9865,
-      "hours_to_close": 22200.0,
-      "volume": 17886975.75765311
+      "hours_to_close": 22190.5,
+      "volume": 17889123.1831331
     },
     {
       "type": "longshot",
       "question": "Will Kamala Harris win the 2028 US Presidential Election?",
       "slug": "will-kamala-harris-win-the-2028-us-presidential-election",
-      "longshot_price": 0.0435,
-      "favorite_price": 0.9565,
-      "hours_to_close": 22200.0,
-      "volume": 7177489.079428989
+      "longshot_price": 0.0445,
+      "favorite_price": 0.9555,
+      "hours_to_close": 22190.5,
+      "volume": 7181635.382888995
     },
     {
       "type": "longshot",
@@ -774,17 +773,8 @@
       "slug": "will-jb-pritzker-win-the-2028-us-presidential-election",
       "longshot_price": 0.0115,
       "favorite_price": 0.9885,
-      "hours_to_close": 22200.0,
-      "volume": 11210592.556665013
-    },
-    {
-      "type": "longshot",
-      "question": "Will Donald Trump win the 2028 US Presidential Election?",
-      "slug": "will-donald-trump-win-the-2028-us-presidential-election",
-      "longshot_price": 0.0305,
-      "favorite_price": 0.9695,
-      "hours_to_close": 22200.0,
-      "volume": 7426319.9262391785
+      "hours_to_close": 22190.5,
+      "volume": 11219220.766618019
     }
   ]
 }
