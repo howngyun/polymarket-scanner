@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-04-28T09:12:16+00:00",
-  "status": "warn",
+  "checked_at": "2026-04-28T16:25:10+00:00",
+  "status": "critical",
   "auto_fixes": [],
   "anomalies": [
     {
       "rule": "check_trader_alive",
-      "severity": "warn",
-      "title": "\ud2b8\ub808\uc774\ub354 \uc9c0\uc5f0",
-      "detail": "\ub9c8\uc9c0\ub9c9 \uc2e4\ud589 90\ubd84 \uc804. cron \uc8fc\uae30 5\ubd84\uc778\ub370 \uc9c0\uc5f0\ub428.",
-      "timestamp": "2026-04-28T09:12:16.405272+00:00"
+      "severity": "critical",
+      "title": "\ud2b8\ub808\uc774\ub354 \uc815\uc9c0",
+      "detail": "\ub9c8\uc9c0\ub9c9 \uc2e4\ud589 185\ubd84 \uc804. Actions \ud655\uc778 \ud544\uc694.",
+      "timestamp": "2026-04-28T16:25:10.666684+00:00"
     }
   ]
 }
