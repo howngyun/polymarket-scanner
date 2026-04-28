@@ -1,19 +1,19 @@
 {
-  "date": "2026-04-27",
+  "date": "2026-04-28",
   "review": {
-    "verdict": "watch",
+    "verdict": "halt_recommended",
     "key_observations": [
-      "Only 1 resolved trade (loss) - insufficient sample for calibration assessment",
-      "Capital drawdown from 500 to 404.81 (-19%) with 4 open positions carrying unrealized losses",
-      "No trading activity in last 24h despite 4 open positions and avg_edge_at_entry of 4.0%"
+      "Capital drawdown: -19% (500 \u2192 404.81) with only 1 resolved trade (loss)",
+      "Trader offline 94 minutes despite 5-min cron schedule - execution failure",
+      "Zero activity in last 24h despite 4 open positions - monitoring breakdown"
     ],
-    "calibration_check": "Cannot assess model calibration with only 1 resolved trade; need minimum 5-10 resolutions to evaluate my_prob accuracy.",
+    "calibration_check": "Insufficient resolved trades (n=1) to assess probability calibration; single loss provides no statistical signal.",
     "recommended_actions": [
-      "Continue paper trading without parameter changes until 10+ trades resolve",
-      "Monitor open positions for resolution timing - verify they are approaching close dates",
-      "If drawdown exceeds -25%, reduce position sizing by 50% for new trades"
+      "HALT: Fix cron/execution infrastructure before resuming - trader is not running",
+      "Review the 4 open positions manually for stale pricing or stuck orders",
+      "After infrastructure fix, restart in paper mode with reduced position sizing (50% current) until 10+ resolved trades accumulated"
     ],
-    "summary": "Insufficient data (1 resolved trade) to assess strategy health. Current -19% drawdown manageable for early-stage paper trading. Recommend continuing observation until 10+ resolutions available."
+    "summary": "Bot is effectively offline (94min delay, 0 trades in 24h) with -19% drawdown. Infrastructure failure detected - halt and repair execution system before any parameter tuning."
   },
   "last_24h": {
     "trades_count": 0,
