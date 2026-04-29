@@ -1,0 +1,4 @@
+# Local test artifact only — GH Actions creates and commits its own paper.db
+# during the first run.
+__pycache__/
+*.pyc
