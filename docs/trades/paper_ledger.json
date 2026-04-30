@@ -15,9 +15,14 @@
     "end_date": "2026-04-30T00:00:00Z",
     "current_btc": null,
     "strike": null,
-    "resolved": false,
-    "pnl": null,
-    "strategy": "high_prob_no"
+    "resolved": true,
+    "pnl": 0.7572,
+    "strategy": "high_prob_no",
+    "payout_per_share": 1.0,
+    "resolution_price": 0.997,
+    "won": true,
+    "fee": 0.0155,
+    "settled_at": "2026-04-30T07:54:05.951595+00:00"
   },
   {
     "status": "filled",

@@ -1,0 +1,12 @@
+{
+  "starting_capital": 500.0,
+  "current_capital": 500.75721119152183,
+  "daily_pnl": 0.7572111915218245,
+  "daily_start_date": "2026-04-30",
+  "total_trades": 1,
+  "kill_switch": false,
+  "kill_reason": null,
+  "recent_trades": [
+    "2026-04-30T07:54:06.295703+00:00"
+  ]
+}
