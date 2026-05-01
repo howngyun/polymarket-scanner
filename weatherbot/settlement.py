@@ -23,7 +23,7 @@ def _fetch_market(market_id: str) -> dict | None:
     try:
         r = requests.get(
             GAMMA_MARKETS_BY_ID,
-            params={"condition_ids": market_id, "limit": 1},
+            params={"condition_ids": market_id, "closed": "true", "limit": 1},
             timeout=TIMEOUT_SEC,
         )
         r.raise_for_status()
